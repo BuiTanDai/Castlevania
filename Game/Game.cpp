@@ -13,26 +13,30 @@ Game * Game::getInstance()
 /* Các câu lệnh khởi tạo game */
 void Game::GameInit()
 {
-	sprite.InitFromFile("test/tool/image.png", "test/tool/simon.info.dat");
-	currentIndex = 0;
-	currentAnimation =1;
-	/* khởi tạo thời gian làm chậm cỡ 1s (100 ms)*/
-	timeDelay.init(100);
+	/* khởi tạo tilemap */
+	tilemap = new Tilemap();
+	tilemap->Init("test/tile");
+	Camera::getInstance()->set(
+		0,
+		0,
+		/* kích thước của camera bằng với kích thước của backbuffer */
+		GLOBALS_D("backbuffer_width"),
+		GLOBALS_D("backbuffer_height"));
+
+	/* di chuyển camera theo phương phải 1 px */
+	Camera::getInstance()->setDx(1);
 }
 /* Các câu lệnh cập nhật game */
 void Game::GameUpdate()
 {
-	/* Set ràng buộc */
-	if (timeDelay.atTime())
-	{
-		sprite.update(currentAnimation, currentIndex);
-	}
+	/* di chuyển camera theo phương x */
+	Camera::getInstance()->goX();
 }
 /* Các câu lệnh vẽ của game */
 void Game::GameRender()
 {
-	/* vẽ hình tại vị trí khung hình hiện tại currentIndex tùy vào frame*/
-	sprite.render(10, 10, currentAnimation, currentIndex);
+	/* vẽ tile lên game */
+	tilemap->render(Camera::getInstance());
 }
 
 Game::Game()

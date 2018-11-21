@@ -1,28 +1,18 @@
 ﻿#pragma once
-
 #include"GameTexture.h"
-/* include để sử dụng kiểu danh sách */
 #include"List.h"
 #include"GameTime.h"
 #include"FrameAnimation.h"
 #include"Animation.h"
 #include"Sprite.h"
+#include"Tilemap.h"
 
 class Game
 {
 	/* singleton pattern */
 	static Game* instance;
 
-	/* Khung hình hiện tại */
-	int currentIndex;
-
-	/*animation hiện tại*/
-	int currentAnimation;
-
-	Sprite sprite;
-
-	/* dùng để làm chậm animation */
-	GameTime timeDelay;
+	Tilemap* tilemap;
 
 public:
 	static Game* getInstance();
@@ -36,3 +26,4 @@ public:
 	Game();
 	~Game();
 };
+
