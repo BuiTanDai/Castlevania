@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game.h" />
     <ClInclude Include="GameConfiguration.h" />
     <ClInclude Include="GameDirectX.h" />
     <ClInclude Include="GameTexture.h" />
     <ClInclude Include="WindowGame.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameConfiguration.cpp" />
     <ClCompile Include="GameDirectX.cpp" />
     <ClCompile Include="GameTexture.cpp" />

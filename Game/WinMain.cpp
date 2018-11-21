@@ -11,7 +11,7 @@
 using namespace std;
 
 #include"GameTexture.h"
-
+#include"Game.h"
 
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -29,9 +29,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	/* Tính thời gian cho mỗi frame */
 	DWORD timePerFrame = 1000 / GLOBALS_D("fps");
 
-	/* b1. Tạo biến imageGame và khởi tạo hình */
-	GameTexture imageGame;
-	imageGame.Init("test/image_game.png", D3DCOLOR_ARGB(255, 0, 28, 255));
+	Game::getInstance()->GameInit();
 
 	/* vòng lặp game */
 	while (msg.message != WM_QUIT)
@@ -43,6 +41,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		DWORD deltaTime = now - startTime;
 		if (deltaTime >= timePerFrame)
 		{
+			Game::getInstance()->GameUpdate();
 			startTime = now;
 			if (PeekMessage(&msg, 0, 0, 0, PM_REMOVE))
 			{
@@ -51,11 +50,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			}
 			float time = deltaTime / 1000.0f;
 			GameDirectX::getInstance()->BeginGraphics();//bat dau ve len backbuffer
-			/* b1. Vẽ hình lên vị trí 10,10 */
-			/* Thêm biến rect */
-			RECT viewRect;
-			SetRect(&viewRect, 31, 2, 109, 86);
-			imageGame.Render(10, 10, &viewRect);
+			Game::getInstance()->GameRender();
 			GameDirectX::getInstance()->EndGraphics();// ket thuc ve len backbuffer
 			GameDirectX::getInstance()->PresentBackBuffer();// ve backbuffer len man hinh
 		}
