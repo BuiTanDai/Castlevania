@@ -5,20 +5,21 @@
 #include"List.h"
 #include"GameTime.h"
 #include"FrameAnimation.h"
+#include"Animation.h"
+#include"Sprite.h"
 
 class Game
 {
 	/* singleton pattern */
 	static Game* instance;
 
-	/* danh sách các vị trí khung hình */
-	List<FrameAnimation*> rectAnimations;
-
-	/* Bức hình animation */
-	GameTexture mario;
-
 	/* Khung hình hiện tại */
 	int currentIndex;
+
+	/*animation hiện tại*/
+	int currentAnimation;
+
+	Sprite sprite;
 
 	/* dùng để làm chậm animation */
 	GameTime timeDelay;
