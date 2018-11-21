@@ -1,5 +1,4 @@
 ﻿#pragma once
-#pragma once
 
 
 #include"GameDirectX.h"
@@ -35,8 +34,10 @@ public:
 	/** Vẽ texture
 	x,y: vị trí bức hình trong backbuffer
 	r: vùng chữ nhật cần vẽ
+	anchorX : điểm neo x
+	anchorY : điểm neo y
 	*/
 
-	void Render(int x, int y, RECT *r = 0);
+	void Render(int x, int y, int anchorX, int anchorY, RECT *r = 0);
 	~GameTexture();
 };

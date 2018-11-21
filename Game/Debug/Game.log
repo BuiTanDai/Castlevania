@@ -1,5 +1,10 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Game.cpp
+  GameTexture.cpp
+d:\sourcegame\castlevania\game\gametexture.cpp(42): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+d:\sourcegame\castlevania\game\gametexture.cpp(43): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
   WinMain.cpp
-c:\users\tan dai\source\repos\game\castlevania\game\winmain.cpp(20): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\winmain.cpp(30): warning C4244: 'initializing': conversion from 'double' to 'DWORD', possible loss of data
-  Game.vcxproj -> C:\Users\Tan Dai\source\repos\Game\Castlevania\Debug\Game Castlevania.exe
+d:\sourcegame\castlevania\game\winmain.cpp(20): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+d:\sourcegame\castlevania\game\winmain.cpp(30): warning C4244: 'initializing': conversion from 'double' to 'DWORD', possible loss of data
+  Generating Code...
+  Game.vcxproj -> D:\SourceGame\Castlevania\Debug\Game Castlevania.exe
