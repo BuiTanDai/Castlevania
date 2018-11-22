@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
+    <ClInclude Include="BaseObject.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="FrameAnimation.h" />
     <ClInclude Include="Game.h" />
@@ -32,11 +33,15 @@
     <ClInclude Include="MovableRect.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteManager.h" />
     <ClInclude Include="Tilemap.h" />
     <ClInclude Include="WindowGame.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="Zombie.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="BaseObject.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameConfiguration.cpp" />
@@ -47,9 +52,12 @@
     <ClCompile Include="MovableRect.cpp" />
     <ClCompile Include="Rect.cpp" />
     <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="SpriteManager.cpp" />
     <ClCompile Include="Tilemap.cpp" />
     <ClCompile Include="WindowGame.cpp" />
     <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

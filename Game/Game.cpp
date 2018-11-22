@@ -14,20 +14,17 @@ Game * Game::getInstance()
 void Game::GameInit()
 {
 	/* khởi tạo tilemap */
-	tilemap = new Tilemap();
-	tilemap->Init("test/tile");
+	world = new World();
+	world->Init("test/object");
 	Camera::getInstance()->set(
 		0,
-		0,
+		0, /* y camera */
 		/* kích thước của camera bằng với kích thước của backbuffer */
 		GLOBALS_D("backbuffer_width"),
 		GLOBALS_D("backbuffer_height"));
-
-	/* di chuyển camera theo phương phải 1 px */
-	Camera::getInstance()->setDx(1);
 }
 /* Các câu lệnh cập nhật game */
-void Game::GameUpdate()
+void Game::GameUpdate(float dt)
 {
 	/* di chuyển camera theo phương x */
 	Camera::getInstance()->goX();

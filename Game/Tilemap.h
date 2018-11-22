@@ -27,6 +27,11 @@ public:
 	/* folderPath : đường dẫn thư mục chứa ma trận và tilesheet */
 	void Init(const char* folderPath);
 	void render(Camera* camera);
+
+	/* lấy chiều cao của world dùng để chuyển đổi tọa độ khi init*/
+	int getWorldHeight();
+
+
 	Tilemap();
 	~Tilemap();
 };

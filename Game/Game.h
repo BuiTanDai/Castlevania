@@ -6,6 +6,7 @@
 #include"Animation.h"
 #include"Sprite.h"
 #include"Tilemap.h"
+#include"World.h"
 
 class Game
 {
@@ -13,6 +14,7 @@ class Game
 	static Game* instance;
 
 	Tilemap* tilemap;
+	World* world;
 
 public:
 	static Game* getInstance();
@@ -20,7 +22,7 @@ public:
 	/* Các câu lệnh khởi tạo game */
 	void GameInit();
 	/* Các câu lệnh cập nhật game */
-	void GameUpdate();
+	void GameUpdate(float dt);
 	/* Các câu lệnh vẽ của game */
 	void GameRender();
 	Game();

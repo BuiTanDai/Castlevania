@@ -80,6 +80,13 @@ void Tilemap::render(Camera * camera)
 	}
 }
 
+int Tilemap::getWorldHeight()
+{
+	return tileRows * tileHeight;
+}
+
+
+
 void Tilemap::Init(const char * tilesheetPath, const char * matrixPath)
 {
 	/* khởi tạo tilesheet */
