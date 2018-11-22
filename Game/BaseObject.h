@@ -34,7 +34,7 @@ public:
 	virtual void setIsLastFrameAnimationDone(bool isLastFrameAnimationDone);
 
 	/* hàm ảo được gọi khi khởi tạo đối tượng đọc từ file, mỗi đối tượng sẽ thực hiện phương thức này khác nhau */
-	virtual void onInitFromFile(ifstream& fs, int mapHeight);
+	virtual void onInitFromFile(ifstream& fs);
 
 	/* hàm ảo, hành động update của đối tượng, do mỗi đối tượng có phương thức cập nhật khác nhau
 		như con zombie thì chạy còn con dơi thì bay hình sin

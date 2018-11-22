@@ -13,7 +13,7 @@ class Game
 	/* singleton pattern */
 	static Game* instance;
 
-	Tilemap* tilemap;
+
 	World* world;
 
 public:

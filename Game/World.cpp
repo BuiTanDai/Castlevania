@@ -32,7 +32,7 @@ void World::Init(const char * tilesheetPath, const char * matrixPath, const char
 			break;
 		}
 		/* đọc thông số của đối tượng */
-		obj->onInitFromFile(fs, worldHeight);
+		obj->onInitFromFile(fs);
 		if (id >= 0)
 		{
 			/* nếu id đối tượng không âm tức đối tượng có sprite ta gán sprite cho nó */

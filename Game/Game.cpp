@@ -26,14 +26,14 @@ void Game::GameInit()
 /* Các câu lệnh cập nhật game */
 void Game::GameUpdate(float dt)
 {
-	/* di chuyển camera theo phương x */
-	Camera::getInstance()->goX();
+	/*cập nhật đối tượng trong world */
+	world->update(dt);
 }
 /* Các câu lệnh vẽ của game */
 void Game::GameRender()
 {
-	/* vẽ tile lên game */
-	tilemap->render(Camera::getInstance());
+	/* vẽ đối tượng trong world */
+	world->render();
 }
 
 Game::Game()

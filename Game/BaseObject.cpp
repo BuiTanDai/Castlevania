@@ -30,14 +30,14 @@ void BaseObject::setIsLastFrameAnimationDone(bool isLastFrameAnimationDone)
 	this->isLastFrameAnimationDone = isLastFrameAnimationDone;
 }
 
-void BaseObject::onInitFromFile(ifstream& fs, int mapHeight)
+void BaseObject::onInitFromFile(ifstream& fs)
 {
 	int collisionType, x, y, width, height;
 	/* đọc collision type x y width height từ file. collision_type thì sẽ học ở bài sau */
 	fs >> collisionType >> x >> y >> width >> height;
 	/* do y của đối tượng trong file là tọa độ hướng từ trên xuống
 	Nhưng y của game chúng ta làm thì gốc tọa độ bên dưới nên ta chuyển nó về cho đúng tọa độ logic */
-	y = mapHeight - y;
+	
 	/* khởi tạo x y width height cho đối tượng */
 	set(x, y, width, height);
 }

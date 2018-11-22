@@ -1,25 +1,29 @@
-c:\users\tan dai\source\repos\game\castlevania\game\debug\vc141.pdb
-c:\users\tan dai\source\repos\game\castlevania\game\debug\vc141.idb
-c:\users\tan dai\source\repos\game\castlevania\game\debug\winmain.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\windowgame.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\gametime.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\gametexture.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\gamedirectx.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\gameconfiguration.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\game.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\sprite.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\gameutils.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\animation.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\tilemap.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\rect.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\movablerect.obj
-c:\users\tan dai\source\repos\game\castlevania\game\debug\camera.obj
-c:\users\tan dai\source\repos\game\castlevania\debug\game castlevania.exe
-c:\users\tan dai\source\repos\game\castlevania\debug\game castlevania.ilk
-c:\users\tan dai\source\repos\game\castlevania\debug\game castlevania.pdb
-c:\users\tan dai\source\repos\game\castlevania\game\debug\game castlevania.tlog\cl.command.1.tlog
-c:\users\tan dai\source\repos\game\castlevania\game\debug\game castlevania.tlog\cl.read.1.tlog
-c:\users\tan dai\source\repos\game\castlevania\game\debug\game castlevania.tlog\cl.write.1.tlog
-c:\users\tan dai\source\repos\game\castlevania\game\debug\game castlevania.tlog\link.command.1.tlog
-c:\users\tan dai\source\repos\game\castlevania\game\debug\game castlevania.tlog\link.read.1.tlog
-c:\users\tan dai\source\repos\game\castlevania\game\debug\game castlevania.tlog\link.write.1.tlog
+d:\sourcegame\castlevania\game\debug\vc141.pdb
+d:\sourcegame\castlevania\game\debug\vc141.idb
+d:\sourcegame\castlevania\game\debug\zombie.obj
+d:\sourcegame\castlevania\game\debug\world.obj
+d:\sourcegame\castlevania\game\debug\winmain.obj
+d:\sourcegame\castlevania\game\debug\windowgame.obj
+d:\sourcegame\castlevania\game\debug\tilemap.obj
+d:\sourcegame\castlevania\game\debug\spritemanager.obj
+d:\sourcegame\castlevania\game\debug\sprite.obj
+d:\sourcegame\castlevania\game\debug\rect.obj
+d:\sourcegame\castlevania\game\debug\movablerect.obj
+d:\sourcegame\castlevania\game\debug\gameutils.obj
+d:\sourcegame\castlevania\game\debug\gametime.obj
+d:\sourcegame\castlevania\game\debug\gametexture.obj
+d:\sourcegame\castlevania\game\debug\gamedirectx.obj
+d:\sourcegame\castlevania\game\debug\gameconfiguration.obj
+d:\sourcegame\castlevania\game\debug\game.obj
+d:\sourcegame\castlevania\game\debug\camera.obj
+d:\sourcegame\castlevania\game\debug\baseobject.obj
+d:\sourcegame\castlevania\game\debug\animation.obj
+d:\sourcegame\castlevania\debug\game castlevania.exe
+d:\sourcegame\castlevania\debug\game castlevania.ilk
+d:\sourcegame\castlevania\debug\game castlevania.pdb
+d:\sourcegame\castlevania\game\debug\game castlevania.tlog\cl.command.1.tlog
+d:\sourcegame\castlevania\game\debug\game castlevania.tlog\cl.read.1.tlog
+d:\sourcegame\castlevania\game\debug\game castlevania.tlog\cl.write.1.tlog
+d:\sourcegame\castlevania\game\debug\game castlevania.tlog\link.command.1.tlog
+d:\sourcegame\castlevania\game\debug\game castlevania.tlog\link.read.1.tlog
+d:\sourcegame\castlevania\game\debug\game castlevania.tlog\link.write.1.tlog
