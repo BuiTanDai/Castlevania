@@ -12,6 +12,9 @@ public:
 		Phương thức này trong sách game có giở sách ra xem sẽ thấy
 	*/
 	void convertWorldToView(float xWorld, float yWorld, float& xView, float& yView);
+	
+	void update();
+
 	Camera();
 	~Camera();
 };

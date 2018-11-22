@@ -74,6 +74,7 @@ void World::update(float dt)
 	///* di chueyern camera để thấy toàn cảnh */
 	//Camera::getInstance()->moveX(1);
 	Player::getInstance()->update(dt);
+	Camera::getInstance()->update();
 }
 
 void World::render()
