@@ -1,8 +1,8 @@
 ﻿#pragma once
-#include "BaseObject.h"
+#include"PhysicsObject.h"
 /* lớp Zombie để hiện thực lớp BaseObject */
 class Zombie :
-	public BaseObject
+	public PhysicsObject
 {
 public:
 	Zombie();

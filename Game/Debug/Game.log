@@ -1,52 +1,7 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Animation.cpp
-  BaseObject.cpp
-d:\sourcegame\castlevania\game\baseobject.cpp(42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-d:\sourcegame\castlevania\game\baseobject.cpp(84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-d:\sourcegame\castlevania\game\baseobject.cpp(90): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
-  Camera.cpp
-  Game.cpp
-d:\sourcegame\castlevania\game\game.cpp(24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-d:\sourcegame\castlevania\game\game.cpp(23): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  GameConfiguration.cpp
-  GameDirectX.cpp
-d:\sourcegame\castlevania\game\gamedirectx.cpp(39): warning C4244: '=': conversion from 'double' to 'UINT', possible loss of data
-d:\sourcegame\castlevania\game\gamedirectx.cpp(40): warning C4244: '=': conversion from 'double' to 'UINT', possible loss of data
-  GameTexture.cpp
-d:\sourcegame\castlevania\game\gametexture.cpp(42): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-d:\sourcegame\castlevania\game\gametexture.cpp(43): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-  GameTime.cpp
-  GameUtils.cpp
-  MovableRect.cpp
-  Rect.cpp
-  Sprite.cpp
-d:\sourcegame\castlevania\game\sprite.cpp(26): warning C4018: '<': signed/unsigned mismatch
-d:\sourcegame\castlevania\game\sprite.cpp(36): warning C4018: '<': signed/unsigned mismatch
-  SpriteManager.cpp
-  Tilemap.cpp
-d:\sourcegame\castlevania\game\tilemap.cpp(14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\sourcegame\castlevania\game\tilemap.cpp(17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\sourcegame\castlevania\game\tilemap.cpp(20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\sourcegame\castlevania\game\tilemap.cpp(23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\sourcegame\castlevania\game\tilemap.cpp(47): warning C4018: '<=': signed/unsigned mismatch
-d:\sourcegame\castlevania\game\tilemap.cpp(49): warning C4018: '<=': signed/unsigned mismatch
-d:\sourcegame\castlevania\game\tilemap.cpp(60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-d:\sourcegame\castlevania\game\tilemap.cpp(78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-d:\sourcegame\castlevania\game\tilemap.cpp(105): warning C4018: '<': signed/unsigned mismatch
-d:\sourcegame\castlevania\game\tilemap.cpp(108): warning C4018: '<': signed/unsigned mismatch
-  WindowGame.cpp
-d:\sourcegame\castlevania\game\windowgame.cpp(36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-d:\sourcegame\castlevania\game\windowgame.cpp(53): warning C4101: 'hdc': unreferenced local variable
-d:\sourcegame\castlevania\game\windowgame.cpp(52): warning C4101: 'ps': unreferenced local variable
-d:\sourcegame\castlevania\game\windowgame.cpp(51): warning C4101: 'wmEvent': unreferenced local variable
-d:\sourcegame\castlevania\game\windowgame.cpp(51): warning C4101: 'wmId': unreferenced local variable
-  WinMain.cpp
-d:\sourcegame\castlevania\game\winmain.cpp(20): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-d:\sourcegame\castlevania\game\winmain.cpp(30): warning C4244: 'initializing': conversion from 'double' to 'DWORD', possible loss of data
-  World.cpp
-d:\sourcegame\castlevania\game\world.cpp(17): warning C4018: '<': signed/unsigned mismatch
-d:\sourcegame\castlevania\game\world.cpp(62): warning C4018: '<': signed/unsigned mismatch
-d:\sourcegame\castlevania\game\world.cpp(74): warning C4018: '<': signed/unsigned mismatch
-  Zombie.cpp
-  Generating Code...
-  Game.vcxproj -> D:\SourceGame\Castlevania\Debug\Game Castlevania.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Player.cpp
+c:\users\tan dai\source\repos\game\castlevania\game\player.cpp(26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\tan dai\source\repos\game\castlevania\game\player.cpp(30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\tan dai\source\repos\game\castlevania\game\player.cpp(38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\tan dai\source\repos\game\castlevania\game\player.cpp(42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Game.vcxproj -> C:\Users\Tan Dai\source\repos\Game\Castlevania\Debug\Game Castlevania.exe

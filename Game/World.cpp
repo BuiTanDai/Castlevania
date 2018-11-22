@@ -1,10 +1,15 @@
 ﻿#include "World.h"
 #include"Camera.h"
-
+#include"Player.h"
 #include"Zombie.h"
+#include"KEY.h"
 
 void World::Init(const char * tilesheetPath, const char * matrixPath, const char * objectsPath)
 {
+	/* khởi tạo vị trí player */
+	Player::getInstance()->set(0, 0, 16, 30);
+
+
 	/* khởi tạo tilemap */
 	tilemap.Init(tilesheetPath, matrixPath);
 
@@ -59,13 +64,16 @@ void World::Init(const char * folderPath)
 
 void World::update(float dt)
 {
+	/* cập nhật key */
+	KEY::getInstance()->update();
 	for (size_t i = 0; i < allObjects.Count; i++)
 	{
 		/* cập nhật đối tượng */
 		allObjects[i]->update(dt);
 	}
-	/* di chueyern camera để thấy toàn cảnh */
-	Camera::getInstance()->moveX(1);
+	///* di chueyern camera để thấy toàn cảnh */
+	//Camera::getInstance()->moveX(1);
+	Player::getInstance()->update(dt);
 }
 
 void World::render()
@@ -76,6 +84,7 @@ void World::render()
 		/* vẽ đối tượng */
 		allObjects[i]->render(Camera::getInstance());
 	}
+	Player::getInstance()->render(Camera::getInstance());
 }
 
 World::World()
