@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include"PhysicsObject.h"
-/* lớp Zombie để hiện thực lớp BaseObject */
+/* lớp Zombie để hiện thực lớp PhysicsObject */
 class Zombie :
 	public PhysicsObject
 {

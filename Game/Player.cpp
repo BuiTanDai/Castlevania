@@ -1,4 +1,4 @@
-#include "Player.h"
+﻿#include "Player.h"
 
 
 
@@ -45,6 +45,13 @@ void Player::onUpdate(float dt)
 	{
 		setDy(0);
 	}
+
+}
+
+void Player::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
+{
+	/* ngăn chặn di chuyển */
+	preventMovementWhenCollision(collisionTime, nx, ny);
 
 }
 

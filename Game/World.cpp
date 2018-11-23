@@ -3,6 +3,7 @@
 #include"Player.h"
 #include"Zombie.h"
 #include"KEY.h"
+#include"Collision.h"
 
 void World::Init(const char * tilesheetPath, const char * matrixPath, const char * objectsPath)
 {
@@ -71,8 +72,7 @@ void World::update(float dt)
 		/* cập nhật đối tượng */
 		allObjects[i]->update(dt);
 	}
-	///* di chueyern camera để thấy toàn cảnh */
-	//Camera::getInstance()->moveX(1);
+
 	Player::getInstance()->update(dt);
 	Camera::getInstance()->update();
 }
@@ -84,6 +84,7 @@ void World::render()
 	{
 		/* vẽ đối tượng */
 		allObjects[i]->render(Camera::getInstance());
+		Collision::CheckCollision(Player::getInstance(), allObjects[i]);
 	}
 	Player::getInstance()->render(Camera::getInstance());
 }
