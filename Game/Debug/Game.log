@@ -1,41 +1,8 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  BaseObject.cpp
-c:\users\tan dai\source\repos\game\castlevania\game\baseobject.cpp(42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\baseobject.cpp(84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\baseobject.cpp(90): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
-  Camera.cpp
   Collision.cpp
-c:\users\tan dai\source\repos\game\castlevania\game\collision.cpp(139): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 c:\users\tan dai\source\repos\game\castlevania\game\collision.cpp(140): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Game.cpp
-c:\users\tan dai\source\repos\game\castlevania\game\game.cpp(24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\game.cpp(23): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  MovableRect.cpp
+c:\users\tan dai\source\repos\game\castlevania\game\collision.cpp(141): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   PhysicsObject.cpp
 c:\users\tan dai\source\repos\game\castlevania\game\physicsobject.cpp(7): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  Player.cpp
-c:\users\tan dai\source\repos\game\castlevania\game\player.cpp(26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\player.cpp(30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\player.cpp(38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\player.cpp(42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Tilemap.cpp
-c:\users\tan dai\source\repos\game\castlevania\game\tilemap.cpp(14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\tilemap.cpp(17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\tilemap.cpp(20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\tilemap.cpp(23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\tilemap.cpp(47): warning C4018: '<=': signed/unsigned mismatch
-c:\users\tan dai\source\repos\game\castlevania\game\tilemap.cpp(49): warning C4018: '<=': signed/unsigned mismatch
-c:\users\tan dai\source\repos\game\castlevania\game\tilemap.cpp(60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\tilemap.cpp(78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\tilemap.cpp(105): warning C4018: '<': signed/unsigned mismatch
-c:\users\tan dai\source\repos\game\castlevania\game\tilemap.cpp(108): warning C4018: '<': signed/unsigned mismatch
-  WinMain.cpp
-c:\users\tan dai\source\repos\game\castlevania\game\winmain.cpp(20): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\winmain.cpp(30): warning C4244: 'initializing': conversion from 'double' to 'DWORD', possible loss of data
-  World.cpp
-c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(23): warning C4018: '<': signed/unsigned mismatch
-c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(70): warning C4018: '<': signed/unsigned mismatch
-c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(83): warning C4018: '<': signed/unsigned mismatch
-  Zombie.cpp
   Generating Code...
   Game.vcxproj -> C:\Users\Tan Dai\source\repos\Game\Castlevania\Debug\Game Castlevania.exe

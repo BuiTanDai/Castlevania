@@ -14,8 +14,6 @@ void World::Init(const char * tilesheetPath, const char * matrixPath, const char
 	/* khởi tạo tilemap */
 	tilemap.Init(tilesheetPath, matrixPath);
 
-	int worldHeight = tilemap.getWorldHeight();
-
 	/* khởi tạo đối tượng */
 	int objectCount;
 	ifstream fs(objectsPath);

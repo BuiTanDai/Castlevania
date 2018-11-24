@@ -45,7 +45,7 @@ void Player::onUpdate(float dt)
 	{
 		setDy(0);
 	}
-
+	PhysicsObject::onUpdate(dt);
 }
 
 void Player::onCollision(MovableRect * other, float collisionTime, int nx, int ny)

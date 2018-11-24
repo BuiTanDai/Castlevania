@@ -7,16 +7,17 @@ MovableRect * Collision::GetSweptBroadPhaseBox(MovableRect * box)
 {
 	MovableRect* broadphaseBox = new MovableRect();
 	broadphaseBox->setX(box->getDx() > 0 ? box->getX() : (box->getX() + box->getDx()));
-	broadphaseBox->setY(box->getDy() > 0 ? (box->getY() + box->getDy()) : box->getY());
+	broadphaseBox->setY(box->getDy() > 0 ? box->getY() : (box->getY() + box->getDy()));
 	broadphaseBox->setWidth(box->getDx() > 0 ? (box->getWidth() + box->getDx()) : (box->getWidth() - box->getDx()));
 	broadphaseBox->setHeight(box->getDy() > 0 ? (box->getHeight() + box->getDy()) : (box->getHeight() - box->getDy()));
 	return broadphaseBox;
 }
 
+
 bool Collision::AABBCheck(Rect * M, Rect * S)
 {
 	return ((M->getX() < S->getX() + S->getWidth() && M->getX() + M->getWidth() > S->getX()) &&
-		(M->getY() - M->getHeight() < S->getY() && M->getY() > S->getY() - S->getHeight()));
+		(M->getY() + M->getHeight() > S->getY() && M->getY() < S->getY() + S->getHeight()));
 }
 
 float Collision::SweptAABB(MovableRect* M, MovableRect* S, float & normalx, float & normaly)
@@ -33,18 +34,18 @@ float Collision::SweptAABB(MovableRect* M, MovableRect* S, float & normalx, floa
 	else
 	{
 		xInvEntry = (S->getX() + S->getWidth()) - M->getX();
-		xInvExit = S->getX() - (M->getX() + M->getWidth());
+		xInvExit = S->getX() - (M->getX() + M->getWidth());		
 	}
 
 	if (M->getDy() > 0.0f)
 	{
-		yInvEntry = S->getY() - S->getHeight() - M->getY();
-		yInvExit = S->getY() - (M->getY() - M->getHeight());
+		yInvEntry = S->getY() - (M->getY() + M->getHeight());
+		yInvExit = (S->getY() + S->getHeight()) - M->getY();
 	}
 	else
 	{
-		yInvEntry = S->getY() - (M->getY() - M->getHeight());
-		yInvExit = (S->getY() - S->getHeight()) - M->getY();
+		yInvEntry = (S->getY() + S->getHeight()) - M->getY();
+		yInvExit = S->getY() - (M->getY() + M->getHeight());
 	}
 
 	// Tính thời gian để bắt đầu và chạm và thời gian để kết thúc va chạm theo mỗi phương:
@@ -107,12 +108,12 @@ float Collision::SweptAABB(MovableRect* M, MovableRect* S, float & normalx, floa
 			if (M->getDy() < 0.0f) // Chạm vào bề mặt phía trên của block:
 			{
 				normalx = 0.0f;
-				normaly = 1.0f;
+				normaly = -1.0f;
 			}
 			else					// Chạm vào bề mặt phía dưới của block:
 			{
 				normalx = 0.0f;
-				normaly = -1.0f;
+				normaly = 1.0f;
 			}
 		}
 
@@ -130,7 +131,7 @@ void Collision::CheckCollision(MovableRect * M, MovableRect * S)
 	{
 		delete broadPhaseBox; //*********************
 		float normalX = 0, normalY = 0;
-		/* thì tính collisionTime */
+		/* tính collisionTime */
 		float collisionTime = SweptAABB(M, S, normalX, normalY);
 		/* Nếu collisionTime<1 thì chắc chắn có va chạm */
 		if (collisionTime < 1)
