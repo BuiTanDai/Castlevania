@@ -1,4 +1,4 @@
-#include "KEY.h"
+﻿#include "KEY.h"
 
 DWORD getKeyChar(char keyChar)
 {
@@ -19,6 +19,8 @@ void KEY::update()
 	isDownDown = GetAsyncKeyState(VK_DOWN);
 	isLeftDown = GetAsyncKeyState(VK_LEFT);
 	isRightDown = GetAsyncKeyState(VK_RIGHT);
+
+	isJumpDown = GetAsyncKeyState(getKeyChar('x'));
 }
 
 KEY::KEY()

@@ -14,37 +14,41 @@ Player * Player::getInstance()
 
 void Player::onUpdate(float dt)
 {
-	bool keyLeftDown, keyRightDown, keyUpDown, keyDownDown;
+	bool keyLeftDown, keyRightDown, keyUpDown, keyDownDown, keyJumpDown;
 	keyLeftDown = KEY::getInstance()->isLeftDown;
 	keyRightDown = KEY::getInstance()->isRightDown;
 	keyUpDown = KEY::getInstance()->isUpDown;
 	keyDownDown = KEY::getInstance()->isDownDown;
 
-	int v = 2;
-	if (keyLeftDown)
+	keyJumpDown = KEY::getInstance()->isJumpDown;
+
+	float vx = GLOBALS_D("player_vx");
+
+	if (getIsOnGround())
 	{
-		setDx(-v);
+		/* nếu nhấn key trái */
+		if (keyLeftDown)
+		{
+			setVx(-vx);
+		}
+		/* nếu nhấn key phải */
+		else if (keyRightDown)
+		{
+			setVx(vx);
+		}
+		else
+		{
+			setVx(0);
+		}
+
+		if (keyJumpDown)
+		{
+			setVy(-100);
+			setIsOnGround(false);
+		}
 	}
-	else if (keyRightDown)
-	{
-		setDx(v);
-	}
-	else
-	{
-		setDx(0);
-	}
-	if (keyUpDown)
-	{
-		setDy(-v);
-	}
-	else if (keyDownDown)
-	{
-		setDy(v);
-	}
-	else
-	{
-		setDy(0);
-	}
+
+	
 	PhysicsObject::onUpdate(dt);
 }
 
@@ -52,7 +56,7 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 {
 	/* ngăn chặn di chuyển */
 	preventMovementWhenCollision(collisionTime, nx, ny);
-
+	PhysicsObject::onCollision(other, collisionTime, nx, ny);
 }
 
 Player::Player()

@@ -1,8 +1,4 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Collision.cpp
-c:\users\tan dai\source\repos\game\castlevania\game\collision.cpp(140): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\tan dai\source\repos\game\castlevania\game\collision.cpp(141): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  PhysicsObject.cpp
-c:\users\tan dai\source\repos\game\castlevania\game\physicsobject.cpp(7): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
+  Player.cpp
+c:\users\tan dai\source\repos\game\castlevania\game\player.cpp(25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   Game.vcxproj -> C:\Users\Tan Dai\source\repos\Game\Castlevania\Debug\Game Castlevania.exe

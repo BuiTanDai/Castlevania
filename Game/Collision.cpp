@@ -92,20 +92,20 @@ float Collision::SweptAABB(MovableRect* M, MovableRect* S, float & normalx, floa
 		// Xác định hướng của pháp tuyến khi va chạm:
 		if (xEntry > yEntry)
 		{
-			if (M->getDx() < 0.0f) // Chạm vào bề mặt bên phải của block:
-			{
-				normalx = 1.0f;
-				normaly = 0.0f;
-			}
-			else					// Chạm vào bề mặt bên trái của block:
+			if (M->getDx() > 0.0f) // Chạm vào bề mặt bên trái của block:
 			{
 				normalx = -1.0f;
+				normaly = 0.0f;
+			}
+			else					// Chạm vào bề mặt bên phải của block:
+			{
+				normalx = 1.0f;
 				normaly = 0.0f;
 			}
 		}
 		else
 		{
-			if (M->getDy() < 0.0f) // Chạm vào bề mặt phía trên của block:
+			if (M->getDy() > 0.0f) // Chạm vào bề mặt phía trên của block:
 			{
 				normalx = 0.0f;
 				normaly = -1.0f;

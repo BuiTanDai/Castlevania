@@ -8,7 +8,7 @@ PhysicsObject::PhysicsObject()
 	setVx(0);
 	setVy(0);
 	/* bật physics cho đối tượng */
-	setPhysicsEnable(false);
+	setPhysicsEnable(true);
 }
 
 void PhysicsObject::onUpdate(float dt)
@@ -76,5 +76,28 @@ bool PhysicsObject::getPhysicsEnable()
 void PhysicsObject::setPhysicsEnable(bool physicsEnable)
 {
 	this->physicsEnable = physicsEnable;
+}
+
+bool PhysicsObject::getIsOnGround()
+{
+	return isOnGround;
+}
+
+void PhysicsObject::setIsOnGround(bool isOnGround)
+{
+	this->isOnGround = isOnGround;
+}
+
+void PhysicsObject::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
+{
+	/* va chạm sàn là va chạm có phản xạ theo hướng từ dưới lên. mà chiều từ trên xuống là chiều dương nên ny=-1 */
+	if (ny == -1)
+	{
+		/* isOnGround = true tức vật có đứng trên sàn */
+		setIsOnGround(true);
+	}
+	/* gọi lại phương thức xử lý va chạm của phần lớp cha */
+	BaseObject::onCollision(other, collisionTime, nx, ny);
+
 }
 

@@ -28,7 +28,10 @@ double GameConfiguration::GetConfiguration(const char * key)
 		globalsConfigurationDouble->insert(pair<const char*, double>("object_animation_time_default", 100));
 
 		/* trọng lực mặc định của đối tượng 80 (px/s^2) */
-		globalsConfigurationDouble->insert(pair<const char*, double>("object_default_ay", 80));
+		globalsConfigurationDouble->insert(pair<const char*, double>("object_default_ay", 180));
+
+		globalsConfigurationDouble->insert(pair<const char*, double>("player_vx", 60));
+		globalsConfigurationDouble->insert(pair<const char*, double>("player_vy_jump", 120));
 
 		/* TODO tạo thêm các giá trị cấu hình double game tại đây 
 		Ví dụ: globalsConfiguration->insert(pair<const char*, double>("gia_tri_key", 10)); 10 la gia tri cua gia_tri_key

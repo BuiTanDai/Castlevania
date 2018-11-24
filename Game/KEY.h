@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include<Windows.h>
 class KEY
 {
@@ -7,7 +7,10 @@ public:
 		isLeftDown,
 		isRightDown,
 		isUpDown,
-		isDownDown;
+		isDownDown,
+
+		//true khi jump
+		isJumpDown;
 
 	static KEY* instance;
 	static KEY* getInstance();
