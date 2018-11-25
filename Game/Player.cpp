@@ -30,25 +30,30 @@ void Player::onUpdate(float dt)
 		if (keyLeftDown)
 		{
 			setVx(-vx);
+			setAnimation(PLAYER_RUN);
+			setTextureDirection(TEXTURE_DIRECTION_LEFT);
 		}
 		/* nếu nhấn key phải */
 		else if (keyRightDown)
 		{
 			setVx(vx);
+			setAnimation(PLAYER_RUN);
+			setTextureDirection(TEXTURE_DIRECTION_RIGHT);
 		}
 		else
 		{
 			setVx(0);
+			setAnimation(PLAYER_STAND);
 		}
 
 		if (keyJumpDown)
 		{
 			setVy(-100);
 			setIsOnGround(false);
+			setAnimation(PLAYER_JUMP);
 		}
 	}
 
-	
 	PhysicsObject::onUpdate(dt);
 }
 

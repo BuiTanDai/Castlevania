@@ -23,6 +23,9 @@ class BaseObject :
 		trạng thái đứng yên
 	*/
 	bool isLastFrameAnimationDone;
+
+	/*hướng mặt của đối tượng (trái hoặc phải)*/
+	TEXTURE_DIRECTION direction;
 public:
 	void setSprite(Sprite*sprite);
 	Sprite* getSprite();
@@ -48,6 +51,15 @@ public:
 dt : thời gian giữa 2 khung hình game tính bằng giây dùng để tính toán vật lý sau này
 	*/
 	virtual void render(Camera* camera);
+
+	int getAnimation();
+	void setAnimation(int animation);
+
+	int getFrameAnimation();
+	void setFrameAnimation(int frameAnimation);
+
+	TEXTURE_DIRECTION getTextureDirection();
+	void setTextureDirection(TEXTURE_DIRECTION direction);
 
 	BaseObject();
 	~BaseObject();
