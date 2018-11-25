@@ -5,7 +5,10 @@
 #include"KEY.h"
 #include"Collision.h"
 
-void World::Init(const char * tilesheetPath, const char * matrixPath, const char * objectsPath)
+void World::Init(const char * tilesheetPath, 
+	const char * matrixPath, 
+	const char * objectsPath,
+	const char * collisionTypeCollidePath)
 {
 	/* khởi tạo vị trí player */
 	Player::getInstance()->set(0, 0, 16, 30);
@@ -13,6 +16,13 @@ void World::Init(const char * tilesheetPath, const char * matrixPath, const char
 
 	/* khởi tạo tilemap */
 	tilemap.Init(tilesheetPath, matrixPath);
+
+	/* khởi tạo phân loại đối tượng */
+	for (size_t i = 0; i < COLLISION_TYPE_COUNT; i++)
+	{
+		objectCategories._Add(new List<BaseObject*>());
+	}
+
 
 	/* khởi tạo đối tượng */
 	int objectCount;
@@ -44,6 +54,23 @@ void World::Init(const char * tilesheetPath, const char * matrixPath, const char
 		}
 		/* thêm đối tượng vào danh sách */
 		allObjects._Add(obj);
+
+		/* thêm object vào từng loại đối tượng */
+		objectCategories.at(obj->getCollisionType())->_Add(obj);
+	}
+
+	/* đọc collisiontype collide */
+	int numberOfCollisionTypeCollides = 0;
+	ifstream fsColli(collisionTypeCollidePath);
+	fsColli >> numberOfCollisionTypeCollides;
+	for (size_t i = 0; i < numberOfCollisionTypeCollides; i++)
+	{
+		int collisionType1, collisionType2;
+		fsColli >> collisionType1 >> collisionType2;
+		CollisionTypeCollide* collisionTypeCollide = new CollisionTypeCollide();
+		collisionTypeCollide->COLLISION_TYPE_1 = (COLLISION_TYPE)collisionType1;
+		collisionTypeCollide->COLLISION_TYPE_2 = (COLLISION_TYPE)collisionType2;
+		collisionTypeCollides._Add(collisionTypeCollide);
 	}
 }
 
@@ -57,8 +84,14 @@ void World::Init(const char * folderPath)
 	matrixPathString.append("/matrix.dat");
 	string objectPathString = folderPathString;
 	objectPathString.append("/objects.dat");
+	string collisionTypeCollidePath = folderPathString;
+	collisionTypeCollidePath.append("/collision_type_collides.dat");
 
-	Init(tilesheetString.c_str(), matrixPathString.c_str(), objectPathString.c_str());
+	Init(tilesheetString.c_str(), 
+		matrixPathString.c_str(), 
+		objectPathString.c_str(),
+		collisionTypeCollidePath.c_str()
+	);
 }
 
 void World::update(float dt)
@@ -69,6 +102,29 @@ void World::update(float dt)
 	{
 		/* cập nhật đối tượng */
 		allObjects[i]->update(dt);
+		Collision::CheckCollision(Player::getInstance(), allObjects[i]);
+	}
+
+	/* xét va chạm cho các loại đối tượng với nhau */
+	for (size_t i = 0; i < collisionTypeCollides.size(); i++)
+	{
+		COLLISION_TYPE col1 = collisionTypeCollides.at(i)->COLLISION_TYPE_1;
+		COLLISION_TYPE col2 = collisionTypeCollides.at(i)->COLLISION_TYPE_2;
+
+		/* danh sách đối tượng thuộc collision type 1 */
+		List<BaseObject*>* collection1 = objectCategories.at(col1);
+		/* danh sách đối tượng thuộc collision type 2 */
+		List<BaseObject*>* collection2 = objectCategories.at(col2);
+
+		for (size_t i1 = 0; i1 < collection1->size(); i1++)
+		{
+			for (size_t i2 = 0; i2 < collection2->size(); i2++)
+			{
+				/* cho xét va chạm của đối tượng dựa vào 1 cặp collisionType trong CollisionTypeCollide */
+				Collision::CheckCollision(collection1->at(i1), collection2->at(i2));
+			}
+		}
+
 	}
 
 	Player::getInstance()->update(dt);
@@ -82,7 +138,6 @@ void World::render()
 	{
 		/* vẽ đối tượng */
 		allObjects[i]->render(Camera::getInstance());
-		Collision::CheckCollision(Player::getInstance(), allObjects[i]);
 	}
 	Player::getInstance()->render(Camera::getInstance());
 }

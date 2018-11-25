@@ -15,7 +15,7 @@ void Game::GameInit()
 {
 	/* khởi tạo tilemap */
 	world = new World();
-	world->Init("test/object");
+	world->Init("assets/levels/level1");
 	Camera::getInstance()->set(
 		0,
 		0, /* y camera */

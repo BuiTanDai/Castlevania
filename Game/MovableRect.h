@@ -1,12 +1,17 @@
 ﻿#pragma once
 #include "Rect.h"
+#include"CollisionType.h"
+
 /* đây là lớp Rect có thể di chuyển */
 class MovableRect :
 	public Rect
 {
 	/* độ dời di chuyển của đối tượng */
 	float dx, dy;
+	COLLISION_TYPE collisionType;
 public:
+	COLLISION_TYPE getCollisionType();
+	void setCollisionType(COLLISION_TYPE collisionType);
 	virtual void setDx(float dx);
 	virtual void setDy(float dy);
 	float getDx();

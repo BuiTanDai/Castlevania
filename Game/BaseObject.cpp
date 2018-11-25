@@ -40,6 +40,9 @@ void BaseObject::onInitFromFile(ifstream& fs)
 	
 	/* khởi tạo x y width height cho đối tượng */
 	set(x, y, width, height);
+
+	/*Khoiwr taoj collisionType*/
+	setCollisionType((COLLISION_TYPE)collisionType);
 }
 
 void BaseObject::update(float dt)

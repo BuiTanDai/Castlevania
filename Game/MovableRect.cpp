@@ -23,6 +23,16 @@ MovableRect::MovableRect()
 	dy = 0;
 }
 
+COLLISION_TYPE MovableRect::getCollisionType()
+{
+	return this->collisionType;
+}
+void MovableRect::setCollisionType(COLLISION_TYPE collisionType)
+{
+	this->collisionType = collisionType;
+}
+
+
 void MovableRect::setDx(float dx)
 {
 	this->dx = dx;
