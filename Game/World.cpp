@@ -4,6 +4,8 @@
 #include"Zombie.h"
 #include"KEY.h"
 #include"Collision.h"
+#include"Fire.h"
+#include"Candle.h"
 
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
@@ -12,7 +14,7 @@ void World::Init(const char * tilesheetPath,
 	const char * spacePath)
 {
 	/* khởi tạo vị trí player */
-	Player::getInstance()->set(0, 0, 16, 30);
+	Player::getInstance()->set(0, 0, 15, 30);
 
 
 	/* khởi tạo tilemap */
@@ -42,6 +44,12 @@ void World::Init(const char * tilesheetPath,
 			obj = new Zombie();
 			break;
 
+		case SPRITE_INFO_FIRE:
+			obj = new Fire();
+			break;
+		case SPRITE_INFO_CANDLE:
+			obj = new Candle();
+			break;
 		default:
 			obj = new BaseObject();
 			break;
@@ -95,17 +103,12 @@ void World::Init(const char * tilesheetPath,
 		ignoreLineIfstream(fsSpace, 2);
 		fsSpace >> space->PlayerX >> space->PlayerY;
 
-		///* do chiều y của trong file định nghĩa ngược với chiều logic nên cần đổi lại */
-		//space->CameraY = worldHeight - space->CameraY;
-		//space->PlayerY = worldHeight - space->PlayerY;
-		//space->Y = worldHeight - space->Y;
-
 		/* thêm vào space */
 		spaces._Add(space);
 	}
 
 	/* bắt đầu từ space 0 */
-	setCurrentSpace(0);
+	setCurrentSpace(4);
 	resetLocationInSpace();
 }
 
@@ -231,6 +234,7 @@ void World::resetLocationInSpace()
 
 	camera->setLocation(getCurrentSpace()->CameraX, getCurrentSpace()->CameraY);
 	player->setLocation(getCurrentSpace()->PlayerX, getCurrentSpace()->PlayerY);
+	
 }
 
 World::World()

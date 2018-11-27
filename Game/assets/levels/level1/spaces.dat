@@ -7,7 +7,7 @@ X       Y       Width       Height
 CameraX     CameraY
 0           0
 PlayerX     PlayerY
-0          0
+10          100
 
 Space2
 X       Y       Width       Height
@@ -15,7 +15,7 @@ X       Y       Width       Height
 CameraX     CameraY
 768         0
 PlayerX     PlayerY
-768         48
+768         100
 
 Space3
 X       Y       Width       Height
@@ -23,7 +23,7 @@ X       Y       Width       Height
 CameraX     CameraY
 2304        0
 PlayerX     PlayerY
-2304        48
+2304        100
 
 Space4
 X       Y       Width       Height
@@ -31,7 +31,7 @@ X       Y       Width       Height
 CameraX     CameraY
 2304        175
 PlayerX     PlayerY
-2304        48
+2320        262
 
 Space5
 X       Y       Width       Height
@@ -39,4 +39,4 @@ X       Y       Width       Height
 CameraX     CameraY
 2811        0
 PlayerX     PlayerY
-2811        48
+2811        100

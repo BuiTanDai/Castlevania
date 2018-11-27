@@ -26,6 +26,8 @@ SpriteManager::SpriteManager()
 	sprites[SPRITE_INFO_ZOMBIE]->InitFromFile("test/zombie/image.png", "test/zombie/zombie.info.dat");
 	sprites[SPRITE_INFO_SIMON]->InitFromFile("assets/sprites/simon/image.png", "assets/sprites/simon/simon.info.dat");
 	sprites[SPRITE_INFO_SIMON]->image->direction =TEXTURE_DIRECTION_RIGHT;
+	sprites[SPRITE_INFO_FIRE]->InitFromFile("assets/sprites/fire/image.png", "assets/sprites/fire/fire.info.dat");
+	sprites[SPRITE_INFO_CANDLE]->InitFromFile("assets/sprites/candle/image.png", "assets/sprites/candle/candle.info.dat");
 }
 SpriteManager::~SpriteManager()
 {

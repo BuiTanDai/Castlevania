@@ -48,11 +48,25 @@ void Player::onUpdate(float dt)
 
 		if (keyJumpDown)
 		{
-			setVy(-100);
+			setVy(-120);
 			setIsOnGround(false);
 			setAnimation(PLAYER_JUMP);
 		}
 	}
+	else 
+		if (keyLeftDown)
+		{
+			setAnimation(PLAYER_JUMP);
+			setVx(-vx);
+			setTextureDirection(TEXTURE_DIRECTION_LEFT);
+		}
+		else if (keyRightDown)
+		{
+			setAnimation(PLAYER_JUMP);
+			setVx(vx);
+			setTextureDirection(TEXTURE_DIRECTION_RIGHT);
+		}
+
 
 	PhysicsObject::onUpdate(dt);
 }
@@ -72,6 +86,7 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 Player::Player()
 {
 	setSprite(SPR(SPRITE_INFO_SIMON));
+	setTextureDirection(TEXTURE_DIRECTION_RIGHT);
 }
 
 

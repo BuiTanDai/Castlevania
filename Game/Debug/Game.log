@@ -1,3 +1,15 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  KEY.cpp
+  Candle.cpp
+  World.cpp
+c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(34): warning C4018: '<': signed/unsigned mismatch
+c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(75): warning C4018: '<': signed/unsigned mismatch
+c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(91): warning C4018: '<': signed/unsigned mismatch
+c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(175): warning C4018: '<': signed/unsigned mismatch
+c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(183): warning C4018: '<': signed/unsigned mismatch
+c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(193): warning C4018: '<': signed/unsigned mismatch
+c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(195): warning C4018: '<': signed/unsigned mismatch
+c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(211): warning C4018: '<': signed/unsigned mismatch
+c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(235): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\tan dai\source\repos\game\castlevania\game\world.cpp(236): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
   Game.vcxproj -> C:\Users\Tan Dai\source\repos\Game\Castlevania\Debug\Game Castlevania.exe
