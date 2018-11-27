@@ -90,6 +90,9 @@
     <ClInclude Include="CollisionTypeCollide.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Space.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameConfiguration.cpp">

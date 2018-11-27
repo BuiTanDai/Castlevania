@@ -16,12 +16,11 @@ void Game::GameInit()
 	/* khởi tạo tilemap */
 	world = new World();
 	world->Init("assets/levels/level1");
-	Camera::getInstance()->set(
-		0,
-		0, /* y camera */
+	Camera::getInstance()->setSize(
 		/* kích thước của camera bằng với kích thước của backbuffer */
 		GLOBALS_D("backbuffer_width"),
 		GLOBALS_D("backbuffer_height"));
+
 }
 /* Các câu lệnh cập nhật game */
 void Game::GameUpdate(float dt)

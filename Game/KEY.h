@@ -10,7 +10,13 @@ public:
 		isDownDown,
 
 		//true khi jump
-		isJumpDown;
+		isJumpDown,
+
+		isNumber1Down,
+		isNumber2Down,
+		isNumber3Down,
+		isNumber4Down,
+		isNumber5Down;
 
 	static KEY* instance;
 	static KEY* getInstance();

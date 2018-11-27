@@ -1,5 +1,3 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Rect.cpp
-d:\sourcegame\castlevania\game\rect.cpp(16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\sourcegame\castlevania\game\rect.cpp(21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Game.vcxproj -> D:\SourceGame\Castlevania\Debug\Game Castlevania.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  KEY.cpp
+  Game.vcxproj -> C:\Users\Tan Dai\source\repos\Game\Castlevania\Debug\Game Castlevania.exe

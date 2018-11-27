@@ -51,9 +51,45 @@ void Camera::update()
 		setDx(player->getDx());
 	}
 
+	//Thêm Space
+	/* nếu camera chạy sang trái và vượt quá góc trái space  */
+	if (getX() + getDx() < space->X && getDx() < 0)
+	{
+		setX(space->X);
+		setDx(0);
+	}
+
+	/* nếu camera chạy sang phải và vượt quá góc phải space  */
+	if (getRight() + getDx() > space->X + space->Width && getDx() > 0)
+	{
+		setX(space->X + space->Width - getWidth());
+		setDx(0);
+	}
+
+	/* nếu player chạy sang trái và vượt quá góc trái space  */
+	if (player->getX() + player->getDx() < space->X && player->getDx() < 0)
+	{
+		player->setX(space->X);
+		player->setDx(0);
+	}
+
+	/* nếu player chạy sang phải và vượt quá góc phải space  */
+	if (player->getRight() + player->getDx() > space->X + space->Width && player->getDx() > 0)
+	{
+		player->setX(space->X + space->Width - player->getWidth());
+		player->setDx(0);
+	}
+
+
+
 	/* cập nhật vị trí camera */
 	goX();
 	goY();
+}
+
+void Camera::setSpace(Space * space)
+{
+	this->space = space;
 }
 
 Camera::Camera()
