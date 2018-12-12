@@ -11,6 +11,7 @@ enum PLAYER_ACTION
 	PLAYER_RUN,
 	/* animation thứ 3 */
 	PLAYER_JUMP,
+	PLAYER_ATTACK
 };
 
 class Player :

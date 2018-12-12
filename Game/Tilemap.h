@@ -26,12 +26,14 @@ public:
 	void Init(const char* tilesheetPath, const char* matrixPath);
 	/* folderPath : đường dẫn thư mục chứa ma trận và tilesheet */
 	void Init(const char* folderPath);
-	void render(Camera* camera);
+	
 
 	/* lấy chiều cao của world dùng để chuyển đổi tọa độ khi init*/
 	int getWorldHeight();
 
-
+	void renderTile(int rowIndex, int columnIndex, Camera* camera);
+	void renderTiles(int rowBegin, int rowEnd, int columnBegin, int columnEnd, Camera* camera);
+	virtual void render(Camera* camera);
 	Tilemap();
 	~Tilemap();
 };

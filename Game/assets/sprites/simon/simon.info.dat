@@ -1,8 +1,8 @@
-Sprite player
+Sprite aa
 R	G	B
 255	255	255	255
 Animation Count
-3
+4
 
 
 Name
@@ -31,5 +31,16 @@ Frame Count
 
 FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
 43			8			16				23				0			0
+
+
+Name
+Animation
+Frame Count
+3
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+59			1			24				30				8			0
+83			1			16				30				0			0
+99			2			22				29				0			0
 
 

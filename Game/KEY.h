@@ -11,6 +11,9 @@ public:
 
 		//true khi jump
 		isJumpDown,
+		isAttackDown,
+		isAttackPress,
+		isPreviousAttackDown,
 
 		isNumber1Down,
 		isNumber2Down,

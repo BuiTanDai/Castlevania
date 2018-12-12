@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{219a26a7-8948-4e18-93bd-c8251d4ff7dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Candle">
+      <UniqueIdentifier>{fab61537-bcd8-4d42-8dd2-5b06038a8772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Fire">
+      <UniqueIdentifier>{f8d8de9e-fd72-491b-8764-83961e48b29c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameDirectX.h">
@@ -72,9 +81,6 @@
     <ClInclude Include="Zombie.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PhysicsObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="KEY.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -93,11 +99,14 @@
     <ClInclude Include="Space.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Fire.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="PhysicsObject.h">
+      <Filter>Object</Filter>
     </ClInclude>
     <ClInclude Include="Candle.h">
-      <Filter>Header Files</Filter>
+      <Filter>Object\Candle</Filter>
+    </ClInclude>
+    <ClInclude Include="Fire.h">
+      <Filter>Object\Fire</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -155,9 +164,6 @@
     <ClCompile Include="Zombie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PhysicsObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="KEY.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -167,11 +173,14 @@
     <ClCompile Include="Collision.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Fire.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="PhysicsObject.cpp">
+      <Filter>Object</Filter>
     </ClCompile>
     <ClCompile Include="Candle.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Object\Candle</Filter>
+    </ClCompile>
+    <ClCompile Include="Fire.cpp">
+      <Filter>Object\Fire</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

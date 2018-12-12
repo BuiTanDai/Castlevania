@@ -14,15 +14,23 @@ Player * Player::getInstance()
 
 void Player::onUpdate(float dt)
 {
-	bool keyLeftDown, keyRightDown, keyUpDown, keyDownDown, keyJumpDown;
+	bool keyLeftDown, keyRightDown, keyUpDown, keyDownDown, keyJumpDown, keyAttackPress;
 	keyLeftDown = KEY::getInstance()->isLeftDown;
 	keyRightDown = KEY::getInstance()->isRightDown;
 	keyUpDown = KEY::getInstance()->isUpDown;
 	keyDownDown = KEY::getInstance()->isDownDown;
 
 	keyJumpDown = KEY::getInstance()->isJumpDown;
+	keyAttackPress = KEY::getInstance()->isAttackPress;
 
 	float vx = GLOBALS_D("player_vx");
+
+	/*if (keyAttackPress)
+	{
+		setAnimation(PLAYER_ATTACK);
+	}
+	else if (getIsLastFrameAnimationDone())
+		setAnimation(PLAYER_STAND);*/
 
 	if (getIsOnGround())
 	{
@@ -40,11 +48,19 @@ void Player::onUpdate(float dt)
 			setAnimation(PLAYER_RUN);
 			setTextureDirection(TEXTURE_DIRECTION_RIGHT);
 		}
-		else
+		else if (keyAttackPress)
 		{
+			setAnimation(PLAYER_ATTACK);
+		}
+		else if (getIsLastFrameAnimationDone()) {
 			setVx(0);
 			setAnimation(PLAYER_STAND);
 		}
+		/*else
+		{
+			setVx(0);
+			setAnimation(PLAYER_STAND);
+		}*/
 
 		if (keyJumpDown)
 		{
