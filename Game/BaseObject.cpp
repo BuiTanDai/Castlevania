@@ -179,6 +179,7 @@ BaseObject::BaseObject()
 	animationGameTime.init(GLOBALS_D("object_animation_time_default"));
 	/* mặc định sẽ cho chạy animation */
 	setPauseAnimation(false);
+	setTextureDirection(TEXTURE_DIRECTION_RIGHT);
 	alive = true;
 }
 
