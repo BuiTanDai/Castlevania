@@ -23,6 +23,7 @@ class BaseObject :
 		trạng thái đứng yên
 	*/
 	bool isLastFrameAnimationDone;
+	bool alive;
 
 	/*hướng mặt của đối tượng (trái hoặc phải)*/
 	TEXTURE_DIRECTION direction;
@@ -45,7 +46,7 @@ public:
 	virtual void onUpdate(float dt);
 	/* hành động cập nhật của đối tượng sau mỗi lần vẽ lại */
 
-	void update(float dt);
+	virtual void update(float dt);
 	/* hành động vẽ của đối tượng
 		camera dùng để biến đổi tọa độ của object từ world sang view
 dt : thời gian giữa 2 khung hình game tính bằng giây dùng để tính toán vật lý sau này
@@ -57,6 +58,12 @@ dt : thời gian giữa 2 khung hình game tính bằng giây dùng để tính 
 
 	int getFrameAnimation();
 	void setFrameAnimation(int frameAnimation);
+
+	float getWidthCurrentFrame();
+	float getHeightCurrentFrame();
+
+	bool getAlive();
+	void setAlive(bool alive);
 
 	TEXTURE_DIRECTION getTextureDirection();
 	void setTextureDirection(TEXTURE_DIRECTION direction);

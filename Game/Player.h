@@ -2,6 +2,7 @@
 #include "PhysicsObject.h"
 #include"SpriteManager.h"
 #include"KEY.h"
+#include"MorningStar.h"
 
 enum PLAYER_ACTION
 {
@@ -22,6 +23,7 @@ public:
 	static Player* getInstance();
 	void onUpdate(float dt) override;
 	void onCollision(MovableRect* other, float collisionTime, int nx, int ny) override;
+	void usingMorningStar();
 	Player();
 	~Player();
 };

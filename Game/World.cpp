@@ -6,6 +6,7 @@
 #include"Collision.h"
 #include"Fire.h"
 #include"Candle.h"
+#include"MorningStar.h"
 
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
@@ -15,7 +16,7 @@ void World::Init(const char * tilesheetPath,
 {
 	/* khởi tạo vị trí player */
 	Player::getInstance()->set(0, 0, 15, 30);
-
+	
 
 	/* khởi tạo tilemap */
 	tilemap.Init(tilesheetPath, matrixPath);
@@ -50,6 +51,7 @@ void World::Init(const char * tilesheetPath,
 		case SPRITE_INFO_CANDLE:
 			obj = new Candle();
 			break;
+
 		default:
 			obj = new BaseObject();
 			break;
@@ -203,6 +205,8 @@ void World::update(float dt)
 
 	Player::getInstance()->update(dt);
 	Camera::getInstance()->update();
+	if (MorningStar::getInstance()->getAlive())
+		MorningStar::getInstance()->update(dt);
 }
 
 void World::render()
@@ -214,6 +218,8 @@ void World::render()
 		allObjects[i]->render(Camera::getInstance());
 	}
 	Player::getInstance()->render(Camera::getInstance());
+	if (MorningStar::getInstance()->getAlive())
+		MorningStar::getInstance()->render(Camera::getInstance());
 }
 
 void World::setCurrentSpace(int spaceIndex)

@@ -28,6 +28,7 @@ SpriteManager::SpriteManager()
 	sprites[SPRITE_INFO_SIMON]->image->direction =TEXTURE_DIRECTION_RIGHT;
 	sprites[SPRITE_INFO_FIRE]->InitFromFile("assets/sprites/fire/image.png", "assets/sprites/fire/fire.info.dat");
 	sprites[SPRITE_INFO_CANDLE]->InitFromFile("assets/sprites/candle/image.png", "assets/sprites/candle/candle.info.dat");
+	sprites[SPRITE_INFO_MORNINGSTAR]->InitFromFile("assets/sprites/weapon/image.png", "assets/sprites/weapon/weapon.info.dat");
 }
 SpriteManager::~SpriteManager()
 {

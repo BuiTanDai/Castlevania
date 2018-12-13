@@ -74,8 +74,7 @@ void BaseObject::update(float dt)
 
 void BaseObject::onUpdate(float dt)
 {
-	/* mặc định sẽ cho chạy animation */
-	setPauseAnimation(false);
+	
 }
 
 void BaseObject::render(Camera* camera)
@@ -142,6 +141,28 @@ void BaseObject::setFrameAnimation(int frameAnimation)
 	this->frameIndex = frameAnimation;
 }
 
+float BaseObject::getWidthCurrentFrame()
+{
+	return this->getSprite()->animations[animationIndex]->frames[frameIndex]->right-
+		this->getSprite()->animations[animationIndex]->frames[frameIndex]->left;
+}
+
+float BaseObject::getHeightCurrentFrame()
+{
+	return this->getSprite()->animations[animationIndex]->frames[frameIndex]->bottom -
+		this->getSprite()->animations[animationIndex]->frames[frameIndex]->top;
+}
+
+bool BaseObject::getAlive()
+{
+	return alive;
+}
+
+void BaseObject::setAlive(bool alive)
+{
+	this->alive = alive;
+}
+
 TEXTURE_DIRECTION BaseObject::getTextureDirection()
 {
 	return direction;
@@ -156,6 +177,9 @@ BaseObject::BaseObject()
 {
 	setSprite(NULL);
 	animationGameTime.init(GLOBALS_D("object_animation_time_default"));
+	/* mặc định sẽ cho chạy animation */
+	setPauseAnimation(false);
+	alive = true;
 }
 
 

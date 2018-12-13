@@ -51,6 +51,7 @@ void Player::onUpdate(float dt)
 		else if (keyAttackPress)
 		{
 			setAnimation(PLAYER_ATTACK);
+			usingMorningStar();
 		}
 		else if (getIsLastFrameAnimationDone()) {
 			setVx(0);
@@ -85,6 +86,8 @@ void Player::onUpdate(float dt)
 
 
 	PhysicsObject::onUpdate(dt);
+	
+	
 }
 
 void Player::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
@@ -97,6 +100,12 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
 	}
 	
+}
+
+void Player::usingMorningStar()
+{
+	MorningStar::getInstance()->setAlive(true);
+	MorningStar::getInstance()->set(0, 0, 40, 40);
 }
 
 Player::Player()

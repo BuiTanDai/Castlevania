@@ -36,6 +36,7 @@
     <ClInclude Include="GameUtils.h" />
     <ClInclude Include="KEY.h" />
     <ClInclude Include="List.h" />
+    <ClInclude Include="MorningStar.h" />
     <ClInclude Include="MovableRect.h" />
     <ClInclude Include="PhysicsObject.h" />
     <ClInclude Include="Player.h" />
@@ -62,6 +63,7 @@
     <ClCompile Include="GameTime.cpp" />
     <ClCompile Include="GameUtils.cpp" />
     <ClCompile Include="KEY.cpp" />
+    <ClCompile Include="MorningStar.cpp" />
     <ClCompile Include="MovableRect.cpp" />
     <ClCompile Include="PhysicsObject.cpp" />
     <ClCompile Include="Player.cpp" />
