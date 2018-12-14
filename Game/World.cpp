@@ -7,6 +7,7 @@
 #include"Fire.h"
 #include"Candle.h"
 #include"MorningStar.h"
+#include"Gate1.h"
 
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
@@ -50,6 +51,10 @@ void World::Init(const char * tilesheetPath,
 			break;
 		case SPRITE_INFO_CANDLE:
 			obj = new Candle();
+			break;
+
+		case -2:
+			obj = new Gate1();
 			break;
 
 		default:

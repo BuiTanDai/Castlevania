@@ -76,6 +76,9 @@
     <Filter Include="Object\MorningStar">
       <UniqueIdentifier>{8279300d-a9a4-4a9e-b42e-c89fea917a4e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Gate1">
+      <UniqueIdentifier>{ea7ba1e1-82cd-4c58-a100-0baa2e28c51f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -165,6 +168,9 @@
     <ClInclude Include="MorningStar.h">
       <Filter>Object\MorningStar</Filter>
     </ClInclude>
+    <ClInclude Include="Gate1.h">
+      <Filter>Object\Gate1</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -241,6 +247,9 @@
     </ClCompile>
     <ClCompile Include="MorningStar.cpp">
       <Filter>Object\MorningStar</Filter>
+    </ClCompile>
+    <ClCompile Include="Gate1.cpp">
+      <Filter>Object\Gate1</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
