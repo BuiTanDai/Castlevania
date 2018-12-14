@@ -1,0 +1,30 @@
+Sprite simon
+R	G	B
+255	255	0	255
+Animation Count
+2
+
+
+Name
+Animation
+Frame Count
+4
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+0			2			32				60				0			0
+32			0			24				62				0			0
+56			2			30				60				0			0
+86			1			24				61				0			0
+
+
+Name
+Animation
+Frame Count
+3
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+110			2			48				60				0			0
+158			2			32				60				0			0
+190			4			43				58				9			0
+
+
