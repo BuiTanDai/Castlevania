@@ -25,53 +25,21 @@ void Player::onUpdate(float dt)
 
 	float vx = GLOBALS_D("player_vx");
 
-	/*if (keyAttackPress)
-	{
-		setAnimation(PLAYER_ATTACK);
-	}
-	else if (getIsLastFrameAnimationDone())
-		setAnimation(PLAYER_STAND);*/
-
-	if (getIsOnGround())
-	{
-		/* nếu nhấn key trái */
-		if (keyLeftDown)
+	
+		//trên không
+		if (keyAttackPress)
 		{
-			setVx(-vx);
-			setAnimation(PLAYER_RUN);
-			setTextureDirection(TEXTURE_DIRECTION_LEFT);
-		}
-		/* nếu nhấn key phải */
-		else if (keyRightDown)
-		{
-			setVx(vx);
-			setAnimation(PLAYER_RUN);
-			setTextureDirection(TEXTURE_DIRECTION_RIGHT);
-		}
-		else if (keyAttackPress)
-		{
+			setVx(0);
 			setAnimation(PLAYER_ATTACK);
 			usingMorningStar();
+			setIsAttacking(true);
 		}
 		else if (getIsLastFrameAnimationDone()) {
 			setVx(0);
-			setAnimation(PLAYER_STAND);
-		}
-		/*else
-		{
-			setVx(0);
-			setAnimation(PLAYER_STAND);
-		}*/
-
-		if (keyJumpDown)
-		{
-			setVy(-120);
-			setIsOnGround(false);
+			setIsAttacking(false);
 			setAnimation(PLAYER_JUMP);
 		}
-	}
-	else 
-		if (keyLeftDown)
+		else if (keyLeftDown)
 		{
 			setAnimation(PLAYER_JUMP);
 			setVx(-vx);
@@ -83,6 +51,63 @@ void Player::onUpdate(float dt)
 			setVx(vx);
 			setTextureDirection(TEXTURE_DIRECTION_RIGHT);
 		}
+
+		//mặt đất
+		if (getIsOnGround())
+		{
+			/* nếu nhấn key trái */
+			if (keyLeftDown)
+			{
+				setVx(-vx);
+				setAnimation(PLAYER_RUN);
+				setTextureDirection(TEXTURE_DIRECTION_LEFT);
+			}
+			/* nếu nhấn key phải */
+			else if (keyRightDown)
+			{
+				setVx(vx);
+				setAnimation(PLAYER_RUN);
+				setTextureDirection(TEXTURE_DIRECTION_RIGHT);
+			}
+			else if (keyDownDown)
+			{
+				if (keyAttackPress)
+				{
+					setVx(0);
+					setAnimation(PLAYER_SIT_ATTACK);
+					usingMorningStar();
+					setIsAttacking(true);
+				}
+				else if (getIsLastFrameAnimationDone()) {
+					setVx(0);
+					setIsAttacking(false);
+					setAnimation(PLAYER_JUMP);
+				}
+
+			}
+			else if (keyAttackPress & getDx() == 0)
+			{
+				setAnimation(PLAYER_ATTACK);
+				usingMorningStar();
+				setIsAttacking(true);
+			}
+			else if (getIsLastFrameAnimationDone()) {
+				setVx(0);
+				setIsAttacking(false);
+				setAnimation(PLAYER_STAND);
+			}
+
+
+			if (keyJumpDown)
+			{
+				setVy(-120);
+				setIsOnGround(false);
+				setAnimation(PLAYER_JUMP);
+
+			}
+		}
+	
+		
 
 
 	PhysicsObject::onUpdate(dt);

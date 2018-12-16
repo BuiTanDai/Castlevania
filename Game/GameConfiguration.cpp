@@ -30,7 +30,7 @@ double GameConfiguration::GetConfiguration(const char * key)
 		/* trọng lực mặc định của đối tượng 80 (px/s^2) */
 		globalsConfigurationDouble->insert(pair<const char*, double>("object_default_ay", 200));
 
-		globalsConfigurationDouble->insert(pair<const char*, double>("player_vx", 80));
+		globalsConfigurationDouble->insert(pair<const char*, double>("player_vx", 120));
 		globalsConfigurationDouble->insert(pair<const char*, double>("player_vy_jump", 120));
 
 		/* TODO tạo thêm các giá trị cấu hình double game tại đây 

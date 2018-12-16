@@ -9,6 +9,7 @@ PhysicsObject::PhysicsObject()
 	setVy(0);
 	/* bật physics cho đối tượng */
 	setPhysicsEnable(true);
+	isAttacking = false;
 }
 
 void PhysicsObject::onUpdate(float dt)
@@ -86,6 +87,16 @@ bool PhysicsObject::getIsOnGround()
 void PhysicsObject::setIsOnGround(bool isOnGround)
 {
 	this->isOnGround = isOnGround;
+}
+
+bool PhysicsObject::getIsAttacking()
+{
+	return isAttacking;
+}
+
+void PhysicsObject::setIsAttacking(bool attacking)
+{
+	isAttacking = attacking;
 }
 
 void PhysicsObject::onCollision(MovableRect * other, float collisionTime, int nx, int ny)

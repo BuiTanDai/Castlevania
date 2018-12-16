@@ -21,10 +21,10 @@ void KEY::update()
 	isRightDown = GetAsyncKeyState(VK_RIGHT);
 
 	isJumpDown = GetAsyncKeyState(getKeyChar('x'));
-
 	isAttackDown = GetAsyncKeyState(getKeyChar('z'));
 	isAttackPress = isAttackDown && !isPreviousAttackDown;
 	isPreviousAttackDown = isAttackDown;
+	
 
 	isNumber1Down = GetAsyncKeyState(VK_NUMPAD1);
 	isNumber2Down = GetAsyncKeyState(VK_NUMPAD2);
