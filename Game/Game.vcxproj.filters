@@ -171,6 +171,9 @@
     <ClInclude Include="Gate1.h">
       <Filter>Object\Gate1</Filter>
     </ClInclude>
+    <ClInclude Include="Stair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -250,6 +253,9 @@
     </ClCompile>
     <ClCompile Include="Gate1.cpp">
       <Filter>Object\Gate1</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

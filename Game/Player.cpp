@@ -25,32 +25,6 @@ void Player::onUpdate(float dt)
 
 	float vx = GLOBALS_D("player_vx");
 
-	
-		//trên không
-		if (keyAttackPress)
-		{
-			setVx(0);
-			setAnimation(PLAYER_ATTACK);
-			usingMorningStar();
-			setIsAttacking(true);
-		}
-		else if (getIsLastFrameAnimationDone()) {
-			setVx(0);
-			setIsAttacking(false);
-			setAnimation(PLAYER_JUMP);
-		}
-		else if (keyLeftDown)
-		{
-			setAnimation(PLAYER_JUMP);
-			setVx(-vx);
-			setTextureDirection(TEXTURE_DIRECTION_LEFT);
-		}
-		else if (keyRightDown)
-		{
-			setAnimation(PLAYER_JUMP);
-			setVx(vx);
-			setTextureDirection(TEXTURE_DIRECTION_RIGHT);
-		}
 
 		//mặt đất
 		if (getIsOnGround())
@@ -80,7 +54,6 @@ void Player::onUpdate(float dt)
 				}
 				else if (getIsLastFrameAnimationDone()) {
 					setVx(0);
-					setIsAttacking(false);
 					setAnimation(PLAYER_JUMP);
 				}
 
@@ -91,20 +64,67 @@ void Player::onUpdate(float dt)
 				usingMorningStar();
 				setIsAttacking(true);
 			}
-			else if (getIsLastFrameAnimationDone()) {
+			else if (keyJumpDown)
+			{
+				setIsOnGround(false);
+				setVy(-120);
+				setAnimation(PLAYER_STAND);
+
+			}
+			else if (getIsAttacking())
+			{
+				if (getIsLastFrameAnimationDone())
+				{
+					setIsAttacking(false);
+					setAnimation(PLAYER_STAND);
+					setVx(0);
+				}
+			}
+			else
+			{
 				setVx(0);
-				setIsAttacking(false);
 				setAnimation(PLAYER_STAND);
 			}
 
-
-			if (keyJumpDown)
+			
+		}
+		else
+		{
+			//trên không
+			if (keyLeftDown)
 			{
-				setVy(-120);
-				setIsOnGround(false);
 				setAnimation(PLAYER_JUMP);
-
+				setVx(-vx);
+				setTextureDirection(TEXTURE_DIRECTION_LEFT);
 			}
+			else if (keyRightDown)
+			{
+				setAnimation(PLAYER_JUMP);
+				setVx(vx);
+				setTextureDirection(TEXTURE_DIRECTION_RIGHT);
+			}
+			else if (keyAttackPress)
+				{
+					setIsAttacking(true);
+					setVx(0);
+					setAnimation(PLAYER_ATTACK);
+					usingMorningStar();
+				}
+			else if (getIsAttacking())
+			{
+				if (getIsLastFrameAnimationDone())
+				{
+					setIsAttacking(false);
+					setAnimation(PLAYER_STAND);
+					setVx(0);
+				}
+			}
+			else
+			{ 
+				setAnimation(PLAYER_STAND);
+				setVx(0);
+			}
+			
 		}
 	
 		

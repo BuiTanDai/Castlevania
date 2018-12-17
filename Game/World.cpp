@@ -8,6 +8,7 @@
 #include"Candle.h"
 #include"MorningStar.h"
 #include"Gate1.h"
+#include"Stair.h"
 
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
@@ -56,6 +57,9 @@ void World::Init(const char * tilesheetPath,
 		case -2:
 			obj = new Gate1();
 			break;
+
+		case -3:
+			obj = new Stair();
 
 		default:
 			obj = new BaseObject();
