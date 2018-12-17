@@ -101,19 +101,23 @@ void PhysicsObject::setIsAttacking(bool attacking)
 
 void PhysicsObject::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
 {
-	/* va chạm sàn là va chạm có phản xạ theo hướng từ dưới lên. mà chiều từ trên xuống là chiều dương nên ny=-1 */
-	if (ny == -1)
+	if (other->getCollisionType() == COLLISION_TYPE_GROUND)
 	{
-		/* isOnGround = true tức vật có đứng trên sàn */
-		setIsOnGround(true);
-		setVy(0);
+		/* va chạm sàn là va chạm có phản xạ theo hướng từ dưới lên. mà chiều từ trên xuống là chiều dương nên ny=-1 */
+		if (ny == -1)
+		{
+			/* isOnGround = true tức vật có đứng trên sàn */
+			setIsOnGround(true);
+			setVy(0);
+		}
+		if (ny == 1)
+		{
+			setVy(0);
+		}
+		/* gọi lại phương thức xử lý va chạm của phần lớp cha */
+	/*	BaseObject::onCollision(other, collisionTime, nx, ny);*/
+		preventMovementWhenCollision(collisionTime, nx, ny);
 	}
-	if (ny == 1)
-	{
-		setVy(0);
-	}
-	/* gọi lại phương thức xử lý va chạm của phần lớp cha */
-	BaseObject::onCollision(other, collisionTime, nx, ny);
 
 }
 

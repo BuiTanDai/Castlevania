@@ -9,6 +9,7 @@
 #include"MorningStar.h"
 #include"Gate1.h"
 #include"Stair.h"
+#include"Panther.h"
 
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
@@ -53,6 +54,9 @@ void World::Init(const char * tilesheetPath,
 		case SPRITE_INFO_CANDLE:
 			obj = new Candle();
 			break;
+		case SPRITE_INFO_PANTHER:
+			obj = new Panther();
+			break;
 
 		case -2:
 			obj = new Gate1();
@@ -60,7 +64,7 @@ void World::Init(const char * tilesheetPath,
 
 		case -3:
 			obj = new Stair();
-
+			break;
 		default:
 			obj = new BaseObject();
 			break;

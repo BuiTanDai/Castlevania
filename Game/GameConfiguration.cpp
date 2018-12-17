@@ -25,7 +25,7 @@ double GameConfiguration::GetConfiguration(const char * key)
 		globalsConfigurationDouble->insert(pair<const char*, double>("fps", 70));
 
 		/* thời gian đổi frame mặc định của animation là 100 milis, cứ sau 100 milis thì animation sẽ đổi 1 frame */
-		globalsConfigurationDouble->insert(pair<const char*, double>("object_animation_time_default", 100));
+		globalsConfigurationDouble->insert(pair<const char*, double>("object_animation_time_default", 500));
 
 		/* trọng lực mặc định của đối tượng 80 (px/s^2) */
 		globalsConfigurationDouble->insert(pair<const char*, double>("object_default_ay", 200));
