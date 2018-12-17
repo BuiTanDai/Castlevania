@@ -119,7 +119,7 @@ void World::Init(const char * tilesheetPath,
 	}
 
 	/* bắt đầu từ space 0 */
-	setCurrentSpace(4);
+	setCurrentSpace(1);
 	resetLocationInSpace();
 }
 
@@ -187,6 +187,7 @@ void World::update(float dt)
 	{
 		/* cập nhật đối tượng */
 		allObjects[i]->update(dt);
+		
 		Collision::CheckCollision(Player::getInstance(), allObjects[i]);
 	}
 
