@@ -58,18 +58,11 @@ void Player::onUpdate(float dt)
 				}
 
 			}
-			else if (keyAttackPress & getDx() == 0)
+			else if (keyAttackPress & getDx() == 0 & getVx() == 0)
 			{
 				setAnimation(PLAYER_ATTACK);
 				usingMorningStar();
 				setIsAttacking(true);
-			}
-			else if (keyJumpDown)
-			{
-				setIsOnGround(false);
-				setVy(-120);
-				setAnimation(PLAYER_STAND);
-
 			}
 			else if (getIsAttacking())
 			{
@@ -86,7 +79,13 @@ void Player::onUpdate(float dt)
 				setAnimation(PLAYER_STAND);
 			}
 
-			
+			if (keyJumpDown)
+			{
+				setIsOnGround(false);
+				setVy(-120);
+				setAnimation(PLAYER_STAND);
+
+			}
 		}
 		else
 		{

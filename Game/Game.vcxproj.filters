@@ -79,6 +79,9 @@
     <Filter Include="Object\Gate1">
       <UniqueIdentifier>{ea7ba1e1-82cd-4c58-a100-0baa2e28c51f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Stair">
+      <UniqueIdentifier>{7265cddd-5353-41e8-b4e1-fb7161c1ee1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -172,7 +175,7 @@
       <Filter>Object\Gate1</Filter>
     </ClInclude>
     <ClInclude Include="Stair.h">
-      <Filter>Header Files</Filter>
+      <Filter>Object\Stair</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -255,7 +258,7 @@
       <Filter>Object\Gate1</Filter>
     </ClCompile>
     <ClCompile Include="Stair.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Object\Stair</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
