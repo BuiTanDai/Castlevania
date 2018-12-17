@@ -4,9 +4,12 @@
 
 Gate1::Gate1()
 {
+
 }
 
 
 Gate1::~Gate1()
 {
+
 }
+
