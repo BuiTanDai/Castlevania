@@ -22,6 +22,9 @@
     <Filter Include="Object\Fire">
       <UniqueIdentifier>{f8d8de9e-fd72-491b-8764-83961e48b29c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Player">
+      <UniqueIdentifier>{c8682169-f576-46b3-a7d3-0692cb8d9301}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Basic">
       <UniqueIdentifier>{91be7450-9fc4-4e16-8a06-03fac4b4c5a3}</UniqueIdentifier>
     </Filter>
@@ -73,14 +76,17 @@
     <Filter Include="Object\Gate1">
       <UniqueIdentifier>{ea7ba1e1-82cd-4c58-a100-0baa2e28c51f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Stair">
+      <UniqueIdentifier>{7265cddd-5353-41e8-b4e1-fb7161c1ee1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Basic\ScoreBar">
+      <UniqueIdentifier>{0477e4a3-4953-495a-b04b-677f39176826}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Object\Enemy">
-      <UniqueIdentifier>{497dc428-1107-4c10-87b8-7578eda62258}</UniqueIdentifier>
+      <UniqueIdentifier>{9fbf8c13-49d7-45ca-8d05-c8afc9bf5514}</UniqueIdentifier>
     </Filter>
     <Filter Include="Object\Enemy\Panther">
-      <UniqueIdentifier>{d250cec1-c37b-4bb4-b279-1b2bcbb20d8a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Player">
-      <UniqueIdentifier>{c8682169-f576-46b3-a7d3-0692cb8d9301}</UniqueIdentifier>
+      <UniqueIdentifier>{2612b7c5-7204-4c11-9a29-67e6c853b894}</UniqueIdentifier>
     </Filter>
     <Filter Include="Object\Enemy\Zombie">
       <UniqueIdentifier>{41aad217-0c6d-4c00-bcdc-1513c59ff2a1}</UniqueIdentifier>
@@ -177,8 +183,11 @@
     <ClInclude Include="Gate1.h">
       <Filter>Object\Gate1</Filter>
     </ClInclude>
+    <ClInclude Include="Stair.h">
+      <Filter>Object\Stair</Filter>
+    </ClInclude>
     <ClInclude Include="ScoreBar.h">
-      <Filter>Basic</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Object\Enemy</Filter>
@@ -266,8 +275,11 @@
     <ClCompile Include="Gate1.cpp">
       <Filter>Object\Gate1</Filter>
     </ClCompile>
+    <ClCompile Include="Stair.cpp">
+      <Filter>Object\Stair</Filter>
+    </ClCompile>
     <ClCompile Include="ScoreBar.cpp">
-      <Filter>Basic</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>Object\Enemy</Filter>

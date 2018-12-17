@@ -11,6 +11,7 @@ class PhysicsObject :
 	bool physicsEnable;
 	/*vật có đang đứng trên sàn k*/
 	bool isOnGround;
+	bool isAttacking;
 
 public:
 	float getAx();
@@ -27,6 +28,8 @@ public:
 
 	bool getIsOnGround();
 	void setIsOnGround(bool isOnGround);
+	bool getIsAttacking();
+	void setIsAttacking(bool attacking);
 	void onCollision(MovableRect* other, float collisionTime, int nx, int ny) override;
 	/* override lại phương thức update của BaseObject */
 	void onUpdate(float dt) override;

@@ -1,5 +1,5 @@
 ﻿#include "Game.h"
-#include"ScoreBar.h"
+#include "ScoreBar.h"
 
 
 /* singleton pattern */
@@ -28,9 +28,7 @@ void Game::GameUpdate(float dt)
 {
 	/*cập nhật đối tượng trong world */
 	world->update(dt);
-	ScoreBar::getInstance()->render();
-	
-	
+	ScoreBar::getInstance()->update();
 }
 /* Các câu lệnh vẽ của game */
 void Game::GameRender()

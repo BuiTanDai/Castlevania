@@ -1,40 +1,41 @@
-d:\sourcegame\castlevania\game\debug\vc141.pdb
-d:\sourcegame\castlevania\game\debug\vc141.idb
-d:\sourcegame\castlevania\game\debug\player.obj
-d:\sourcegame\castlevania\game\debug\physicsobject.obj
-d:\sourcegame\castlevania\game\debug\panther.obj
-d:\sourcegame\castlevania\game\debug\movablerect.obj
-d:\sourcegame\castlevania\game\debug\morningstar.obj
-d:\sourcegame\castlevania\game\debug\key.obj
-d:\sourcegame\castlevania\game\debug\gate1.obj
-d:\sourcegame\castlevania\game\debug\gameutils.obj
-d:\sourcegame\castlevania\game\debug\gametime.obj
-d:\sourcegame\castlevania\game\debug\gametexture.obj
-d:\sourcegame\castlevania\game\debug\gamedirectx.obj
-d:\sourcegame\castlevania\game\debug\gameconfiguration.obj
-d:\sourcegame\castlevania\game\debug\game.obj
-d:\sourcegame\castlevania\game\debug\fire.obj
-d:\sourcegame\castlevania\game\debug\enemy.obj
-d:\sourcegame\castlevania\game\debug\collision.obj
-d:\sourcegame\castlevania\game\debug\candle.obj
-d:\sourcegame\castlevania\game\debug\camera.obj
-d:\sourcegame\castlevania\game\debug\baseobject.obj
-d:\sourcegame\castlevania\game\debug\animation.obj
-d:\sourcegame\castlevania\game\debug\zombie.obj
-d:\sourcegame\castlevania\game\debug\world.obj
-d:\sourcegame\castlevania\game\debug\winmain.obj
-d:\sourcegame\castlevania\game\debug\windowgame.obj
-d:\sourcegame\castlevania\game\debug\tilemap.obj
-d:\sourcegame\castlevania\game\debug\spritemanager.obj
-d:\sourcegame\castlevania\game\debug\sprite.obj
-d:\sourcegame\castlevania\game\debug\scorebar.obj
-d:\sourcegame\castlevania\game\debug\rect.obj
-d:\sourcegame\castlevania\debug\game castlevania.exe
-d:\sourcegame\castlevania\debug\game castlevania.ilk
-d:\sourcegame\castlevania\debug\game castlevania.pdb
-d:\sourcegame\castlevania\game\debug\game castlevania.tlog\cl.command.1.tlog
-d:\sourcegame\castlevania\game\debug\game castlevania.tlog\cl.read.1.tlog
-d:\sourcegame\castlevania\game\debug\game castlevania.tlog\cl.write.1.tlog
-d:\sourcegame\castlevania\game\debug\game castlevania.tlog\link.command.1.tlog
-d:\sourcegame\castlevania\game\debug\game castlevania.tlog\link.read.1.tlog
-d:\sourcegame\castlevania\game\debug\game castlevania.tlog\link.write.1.tlog
+d:\castlevania-dai (3)\castlevania-dai\game\debug\vc141.pdb
+d:\castlevania-dai (3)\castlevania-dai\game\debug\vc141.idb
+d:\castlevania-dai (3)\castlevania-dai\game\debug\sprite.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\rect.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\player.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\physicsobject.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\movablerect.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\morningstar.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\key.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\gate1.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\gameutils.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\gametime.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\gametexture.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\gamedirectx.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\gameconfiguration.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\game.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\fire.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\collision.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\candle.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\camera.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\baseobject.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\animation.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\zombie.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\world.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\winmain.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\windowgame.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\tilemap.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\stair.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\spritemanager.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\scorebar.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\enemy.obj
+d:\castlevania-dai (3)\castlevania-dai\game\debug\panther.obj
+d:\castlevania-dai (3)\castlevania-dai\debug\game castlevania.exe
+d:\castlevania-dai (3)\castlevania-dai\debug\game castlevania.ilk
+d:\castlevania-dai (3)\castlevania-dai\debug\game castlevania.pdb
+d:\castlevania-dai (3)\castlevania-dai\game\debug\game castlevania.tlog\cl.command.1.tlog
+d:\castlevania-dai (3)\castlevania-dai\game\debug\game castlevania.tlog\cl.read.1.tlog
+d:\castlevania-dai (3)\castlevania-dai\game\debug\game castlevania.tlog\cl.write.1.tlog
+d:\castlevania-dai (3)\castlevania-dai\game\debug\game castlevania.tlog\link.command.1.tlog
+d:\castlevania-dai (3)\castlevania-dai\game\debug\game castlevania.tlog\link.read.1.tlog
+d:\castlevania-dai (3)\castlevania-dai\game\debug\game castlevania.tlog\link.write.1.tlog

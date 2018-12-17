@@ -17,6 +17,10 @@ void MovableRect::preventMovementWhenCollision(float collisionTime, int nx, int 
 
 }
 
+void MovableRect::onIntersect(MovableRect * other)
+{
+}
+
 MovableRect::MovableRect()
 {
 	dx = 0;

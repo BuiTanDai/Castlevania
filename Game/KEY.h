@@ -14,6 +14,7 @@ public:
 		isAttackDown,
 		isAttackPress,
 		isPreviousAttackDown,
+		isJumpAttck,
 
 		isNumber1Down,
 		isNumber2Down,

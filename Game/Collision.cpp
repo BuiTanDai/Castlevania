@@ -34,7 +34,7 @@ float Collision::SweptAABB(MovableRect* M, MovableRect* S, float & normalx, floa
 	else
 	{
 		xInvEntry = (S->getX() + S->getWidth()) - M->getX();
-		xInvExit = S->getX() - (M->getX() + M->getWidth());		
+		xInvExit = S->getX() - (M->getX() + M->getWidth());
 	}
 
 	if (M->getDy() > 0.0f)

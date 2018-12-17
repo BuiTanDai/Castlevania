@@ -86,6 +86,9 @@ void BaseObject::render(Camera* camera)
 	float xView, yView;
 	/* tính tọa độ view để vẽ đối tượng lên màn hình */
 	camera->convertWorldToView(getX(), getY(), xView, yView);
+	xView -= (getWidthCurrentFrame() - getWidth()) / 2;
+	yView -= (getHeightCurrentFrame() - getHeight()) /2;
+
 
 	/* hướng mặt mặc định của bức hình */
 	TEXTURE_DIRECTION imageDirection = sprite->image->direction;

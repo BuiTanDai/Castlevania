@@ -32,7 +32,6 @@ SpriteManager::SpriteManager()
 	sprites[SPRITE_INFO_PANTHER]->InitFromFile("assets/sprites/Enemies/panther/image.png", "assets/sprites/Enemies/panther/panther.info.dat");
 	sprites[SPRITE_INFO_PANTHER]->image->direction = TEXTURE_DIRECTION_LEFT;
 
-
 }
 SpriteManager::~SpriteManager()
 {

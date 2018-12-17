@@ -1,6 +1,5 @@
 ﻿#include "PhysicsObject.h"
 
-
 PhysicsObject::PhysicsObject()
 {
 	setAx(0);
@@ -10,6 +9,7 @@ PhysicsObject::PhysicsObject()
 	setVy(0);
 	/* bật physics cho đối tượng */
 	setPhysicsEnable(true);
+	isAttacking = false;
 }
 
 void PhysicsObject::onUpdate(float dt)
@@ -89,9 +89,19 @@ void PhysicsObject::setIsOnGround(bool isOnGround)
 	this->isOnGround = isOnGround;
 }
 
+bool PhysicsObject::getIsAttacking()
+{
+	return isAttacking;
+}
+
+void PhysicsObject::setIsAttacking(bool attacking)
+{
+	isAttacking = attacking;
+}
+
 void PhysicsObject::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
 {
-	if (other->getCollisionType() == COLLISION_TYPE_GROUND) 
+	if (other->getCollisionType() == COLLISION_TYPE_GROUND)
 	{
 		/* va chạm sàn là va chạm có phản xạ theo hướng từ dưới lên. mà chiều từ trên xuống là chiều dương nên ny=-1 */
 		if (ny == -1)
@@ -108,7 +118,6 @@ void PhysicsObject::onCollision(MovableRect * other, float collisionTime, int nx
 	/*	BaseObject::onCollision(other, collisionTime, nx, ny);*/
 		preventMovementWhenCollision(collisionTime, nx, ny);
 	}
-	
 
 }
 

@@ -8,6 +8,7 @@
 #include"Candle.h"
 #include"MorningStar.h"
 #include"Gate1.h"
+#include"Stair.h"
 #include"Panther.h"
 
 void World::Init(const char * tilesheetPath, 
@@ -56,9 +57,13 @@ void World::Init(const char * tilesheetPath,
 		case SPRITE_INFO_PANTHER:
 			obj = new Panther();
 			break;
+
 		case -2:
 			obj = new Gate1();
 			break;
+
+		case -3:
+			obj = new Stair();
 
 		default:
 			obj = new BaseObject();
@@ -186,6 +191,7 @@ void World::update(float dt)
 	{
 		/* cập nhật đối tượng */
 		allObjects[i]->update(dt);
+		
 		Collision::CheckCollision(Player::getInstance(), allObjects[i]);
 	}
 

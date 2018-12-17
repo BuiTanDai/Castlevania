@@ -23,6 +23,7 @@ public:
 
 	/* phương thức xử lý va chạm chặn di chuyển khi phát hiện va chạm */
 	void preventMovementWhenCollision(float collisionTime, int nx, int ny);
+	virtual void onIntersect(MovableRect* other);
 
 	MovableRect();
 	~MovableRect();

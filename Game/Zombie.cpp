@@ -35,15 +35,15 @@ void Zombie::onInitFormFile(fstream & fs)
 
 void Zombie::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
 {
-	
+
 	if (other->getCollisionType() == COLLISION_TYPE_GROUND)
 
 	{
 		/*preventMovementWhenCollision(collisionTime, nx, ny);*/
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
 	}
-		
-	
+
+
 	/* ngăn chặn di chuyển */
 
 }
