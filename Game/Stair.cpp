@@ -7,17 +7,14 @@ void Stair::onIntersect(MovableRect * other)
 	auto key = KEY::getInstance();
 	if (key->isUpDown && key->isRightDown)
 	{
-		setAnimation(PLAYER_UPSTAIR);
-		player->setDx(getDx() + 2);
-		player->setDy(getDy() - 2);
+		player->setDx(1);
+		player->setDy(-1);
 
 		player->setIsOnStair(true);
+		player->setIsOnGround(false);
 	}
-	
-	
-	
-	
 
+	
 }
 
 Stair::Stair()

@@ -2,7 +2,7 @@ Sprite player
 R	G	B
 255	123	234	165
 Animation Count
-14
+15
 
 
 Name
@@ -89,6 +89,15 @@ Frame Count
 
 FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
 78				69				30				32				0			0
+14				516				30				32				0			0
+
+
+Name
+STAND_STAIR
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
 14				516				30				32				0			0
 
 

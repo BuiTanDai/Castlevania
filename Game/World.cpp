@@ -195,6 +195,14 @@ void World::update(float dt)
 		Collision::CheckCollision(Player::getInstance(), allObjects[i]);
 	}
 
+	if (MorningStar::getInstance()->getAlive()) {
+		for (size_t i = 0; i < allObjects.Count; i++)
+		{
+			/* cập nhật đối tượng */
+			Collision::CheckCollision(MorningStar::getInstance(), allObjects[i]);
+		}
+	}
+
 	/* xét va chạm cho các loại đối tượng với nhau */
 	for (size_t i = 0; i < collisionTypeCollides.size(); i++)
 	{

@@ -87,20 +87,24 @@ void Player::onUpdate(float dt)
 
 			}
 		}
-		else
-			if (getIsOnStair())
+		else if (getIsOnStair())
 			{
-				setDx(0);
-				setDy(0);
-				setVx(0);
-				setVy(0);
-				setAy(0);
-				//setAnimation(PLAYER_UPSTAIR);
+				/*setDx(0);
+				setDy(0);*/
+				//setPhysicsEnable(false);
+				
+				if (keyUpDown && keyRightDown)
+				{
+					setAnimation(PLAYER_UPSTAIR);
+				}
+				else
+					setAnimation(PLAYET_STAND_STAIR_UP);
+				
 			}
 			else
 			{
+				setPhysicsEnable(true);
 				//trên không
-				setAy(GLOBALS_D("object_default_ay"));
 				if (keyLeftDown)
 				{
 					setAnimation(PLAYER_JUMP);

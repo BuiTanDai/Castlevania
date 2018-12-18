@@ -91,6 +91,9 @@
     <Filter Include="Object\Enemy\Zombie">
       <UniqueIdentifier>{41aad217-0c6d-4c00-bcdc-1513c59ff2a1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Scobar">
+      <UniqueIdentifier>{ac14b560-ade6-4ab8-a722-94f35b9bc189}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -186,14 +189,14 @@
     <ClInclude Include="Stair.h">
       <Filter>Object\Stair</Filter>
     </ClInclude>
-    <ClInclude Include="ScoreBar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Object\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="Panther.h">
       <Filter>Object\Enemy\Panther</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreBar.h">
+      <Filter>Object\Scobar</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -278,14 +281,14 @@
     <ClCompile Include="Stair.cpp">
       <Filter>Object\Stair</Filter>
     </ClCompile>
-    <ClCompile Include="ScoreBar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="Panther.cpp">
       <Filter>Object\Enemy\Panther</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreBar.cpp">
+      <Filter>Object\Scobar</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

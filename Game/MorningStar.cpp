@@ -99,6 +99,14 @@ void MorningStar::render(Camera * camera)
 	BaseObject::render(camera);
 }
 
+void MorningStar::onIntersect(MovableRect * other)
+{
+	if (other->getCollisionType() == COLLISION_TYPE_STATIC_OBJECT)
+	{
+		int a;
+	}
+}
+
 void MorningStar::OnCollision()
 {
 }
