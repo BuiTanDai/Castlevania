@@ -1,0 +1,35 @@
+Sprite panther_sprite
+R	G	B
+255	175	255	247
+Animation Count
+3
+
+
+Name
+Stand
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+0			1			24				15				0			0
+
+
+Name
+Jump
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+24			3			32				13				0			0
+
+
+Name
+Animation
+Frame Count
+2
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+56			0			28				16				0			0
+84			0			30				16				0			0
+
+

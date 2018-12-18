@@ -34,7 +34,7 @@ float Collision::SweptAABB(MovableRect* M, MovableRect* S, float & normalx, floa
 	else
 	{
 		xInvEntry = (S->getX() + S->getWidth()) - M->getX();
-		xInvExit = S->getX() - (M->getX() + M->getWidth());		
+		xInvExit = S->getX() - (M->getX() + M->getWidth());
 	}
 
 	if (M->getDy() > 0.0f)
@@ -130,12 +130,6 @@ void Collision::CheckCollision(MovableRect * M, MovableRect * S)
 	if (AABBCheck(broadPhaseBox, S))
 	{
 		delete broadPhaseBox; //*********************
-		if (AABBCheck(M, S))
-		{
-			M->onIntersect(S);
-			S->onIntersect(M);
-			return;
-		}
 		float normalX = 0, normalY = 0;
 		/* tính collisionTime */
 		float collisionTime = SweptAABB(M, S, normalX, normalY);

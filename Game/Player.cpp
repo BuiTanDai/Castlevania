@@ -140,21 +140,27 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 
 	if(other->getCollisionType()==COLLISION_TYPE_GROUND)
 	{
-		preventMovementWhenCollision(collisionTime, nx, ny);
+		/*preventMovementWhenCollision(collisionTime, nx, ny);*/
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
 	}
 
-	/*if (other->getCollisionType() == COLLISION_TYPE_GATE)
+	if (other->getCollisionType() == COLLISION_TYPE_GATE)
 	{
 		setDx(0);
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
-	}*/
+	}
 
 	/*if (other->getCollisionType() == COLLISION_TYPE_STAIR)
 	{
 		preventMovementWhenCollision(collisionTime, nx, ny);
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
 	}*/
+
+	if (other->getCollisionType() == COLLISION_TYPE_ENEMY)
+	{
+		setDx(0);
+		PhysicsObject::onCollision(other, collisionTime, nx, ny);
+	}
 	
 }
 
