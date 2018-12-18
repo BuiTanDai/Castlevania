@@ -25,11 +25,15 @@ class Player :
 	public PhysicsObject
 {
 	static Player* instance;
+	bool isOnStair;
 public:
 	static Player* getInstance();
 	void onUpdate(float dt) override;
 	void onCollision(MovableRect* other, float collisionTime, int nx, int ny) override;
+	//void onIntersect(MovableRect* other) override;
 	void usingMorningStar();
+	bool getIsOnStair();
+	void setIsOnStair(bool isOnStair);
 	Player();
 	~Player();
 };

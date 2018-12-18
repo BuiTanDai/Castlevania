@@ -88,43 +88,56 @@ void Player::onUpdate(float dt)
 			}
 		}
 		else
-		{
-			//trên không
-			if (keyLeftDown)
+			if (getIsOnStair())
 			{
-				setAnimation(PLAYER_JUMP);
-				setVx(-vx);
-				setTextureDirection(TEXTURE_DIRECTION_LEFT);
+				setDx(0);
+				setDy(0);
+				setVx(0);
+				setVy(0);
+				setAy(0);
+				//setAnimation(PLAYER_UPSTAIR);
 			}
-			else if (keyRightDown)
+			else
 			{
-				setAnimation(PLAYER_JUMP);
-				setVx(vx);
-				setTextureDirection(TEXTURE_DIRECTION_RIGHT);
-			}
-			else if (keyAttackPress)
+				//trên không
+				setAy(GLOBALS_D("object_default_ay"));
+				if (keyLeftDown)
 				{
-					setIsAttacking(true);
-					setVx(0);
-					setAnimation(PLAYER_ATTACK);
-					usingMorningStar();
+					setAnimation(PLAYER_JUMP);
+					setVx(-vx);
+					setTextureDirection(TEXTURE_DIRECTION_LEFT);
 				}
-			else if (getIsAttacking())
-			{
-				if (getIsLastFrameAnimationDone())
+				else if (keyRightDown)
 				{
-					setIsAttacking(false);
+					setAnimation(PLAYER_JUMP);
+					setVx(vx);
+					setTextureDirection(TEXTURE_DIRECTION_RIGHT);
+				}
+				else if (keyAttackPress)
+					{
+						setIsAttacking(true);
+						setVx(0);
+						setAnimation(PLAYER_ATTACK);
+						usingMorningStar();
+					}
+				else if (getIsAttacking())
+				{
+					if (getIsLastFrameAnimationDone())
+					{
+						setIsAttacking(false);
+						setAnimation(PLAYER_STAND);
+						setVx(0);
+					}
+				}
+				else
+				{ 
 					setAnimation(PLAYER_STAND);
 					setVx(0);
 				}
-			}
-			else
-			{ 
-				setAnimation(PLAYER_STAND);
-				setVx(0);
-			}
 			
 		}
+
+		
 	
 		
 
@@ -152,7 +165,7 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 
 	/*if (other->getCollisionType() == COLLISION_TYPE_STAIR)
 	{
-		preventMovementWhenCollision(collisionTime, nx, ny);
+		setDx(0);
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
 	}*/
 
@@ -164,9 +177,21 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 	
 }
 
+
+
 void Player::usingMorningStar()
 {
 	MorningStar::getInstance()->setAlive(true);
+}
+
+bool Player::getIsOnStair()
+{
+	return isOnStair;
+}
+
+void Player::setIsOnStair(bool isOnStair)
+{
+	this->isOnStair = isOnStair;
 }
 
 Player::Player()

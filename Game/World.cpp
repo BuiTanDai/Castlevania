@@ -64,7 +64,7 @@ void World::Init(const char * tilesheetPath,
 
 		case -3:
 			obj = new Stair();
-
+			break;
 		default:
 			obj = new BaseObject();
 			break;
