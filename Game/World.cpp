@@ -191,15 +191,22 @@ void World::update(float dt)
 	{
 		/* cập nhật đối tượng */
 		allObjects[i]->update(dt);
+		if (allObjects[i]->getAlive())
+		{
+			Collision::CheckCollision(Player::getInstance(), allObjects[i]);
+			Collision::CheckCollision(allObjects[i], Player::getInstance());
+		}
 		
-		Collision::CheckCollision(Player::getInstance(), allObjects[i]);
 	}
 
 	if (MorningStar::getInstance()->getAlive()) {
 		for (size_t i = 0; i < allObjects.Count; i++)
 		{
 			/* cập nhật đối tượng */
-			Collision::CheckCollision(MorningStar::getInstance(), allObjects[i]);
+			if (allObjects[i]->getAlive())
+			{
+				Collision::CheckCollision(MorningStar::getInstance(), allObjects[i]);
+			}
 		}
 	}
 

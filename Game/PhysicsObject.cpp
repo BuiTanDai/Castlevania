@@ -103,10 +103,8 @@ void PhysicsObject::onCollision(MovableRect * other, float collisionTime, int nx
 {
 	if (other->getCollisionType() == COLLISION_TYPE_GROUND)
 	{
-		/* va chạm sàn là va chạm có phản xạ theo hướng từ dưới lên. mà chiều từ trên xuống là chiều dương nên ny=-1 */
 		if (ny == -1)
 		{
-			/* isOnGround = true tức vật có đứng trên sàn */
 			setIsOnGround(true);
 			setVy(0);
 		}
@@ -114,8 +112,6 @@ void PhysicsObject::onCollision(MovableRect * other, float collisionTime, int nx
 		{
 			setVy(0);
 		}
-		/* gọi lại phương thức xử lý va chạm của phần lớp cha */
-	/*	BaseObject::onCollision(other, collisionTime, nx, ny);*/
 		preventMovementWhenCollision(collisionTime, nx, ny);
 	}
 

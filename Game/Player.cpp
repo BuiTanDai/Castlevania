@@ -167,15 +167,13 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
 	}
 
-	/*if (other->getCollisionType() == COLLISION_TYPE_STAIR)
-	{
-		setDx(0);
-		PhysicsObject::onCollision(other, collisionTime, nx, ny);
-	}*/
-
 	if (other->getCollisionType() == COLLISION_TYPE_ENEMY)
 	{
-		setDx(0);
+		PhysicsObject::onCollision(other, collisionTime, nx, ny);
+	}
+
+	if (other->getCollisionType() == COLLISION_TYPE_STATIC_OBJECT)
+	{
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
 	}
 	
@@ -202,6 +200,7 @@ Player::Player()
 {
 	setSprite(SPR(SPRITE_INFO_SIMON));
 	setTextureDirection(TEXTURE_DIRECTION_RIGHT);
+	setCollisionType(COLLISION_TYPE_PLAYER);
 }
 
 

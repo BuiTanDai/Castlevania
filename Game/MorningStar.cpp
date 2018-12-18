@@ -103,7 +103,11 @@ void MorningStar::onIntersect(MovableRect * other)
 {
 	if (other->getCollisionType() == COLLISION_TYPE_STATIC_OBJECT)
 	{
-		int a;
+		other->setAlive(false);
+	}
+	if (other->getCollisionType() == COLLISION_TYPE_ENEMY)
+	{
+		other->setAlive(false);
 	}
 }
 

@@ -79,6 +79,8 @@ void BaseObject::onUpdate(float dt)
 
 void BaseObject::render(Camera* camera)
 {
+	if (!getAlive())
+		return;
 	if (getSprite() == 0)
 	{
 		return;
@@ -156,15 +158,7 @@ float BaseObject::getHeightCurrentFrame()
 		this->getSprite()->animations[animationIndex]->frames[frameIndex]->top;
 }
 
-bool BaseObject::getAlive()
-{
-	return alive;
-}
 
-void BaseObject::setAlive(bool alive)
-{
-	this->alive = alive;
-}
 
 TEXTURE_DIRECTION BaseObject::getTextureDirection()
 {

@@ -7,6 +7,7 @@ class MovableRect :
 	public Rect
 {
 	/* độ dời di chuyển của đối tượng */
+	bool alive;
 	float dx, dy;
 	COLLISION_TYPE collisionType;
 public:
@@ -24,6 +25,9 @@ public:
 	/* phương thức xử lý va chạm chặn di chuyển khi phát hiện va chạm */
 	void preventMovementWhenCollision(float collisionTime, int nx, int ny);
 	virtual void onIntersect(MovableRect* other);
+
+	bool getAlive();
+	void setAlive(bool alive);
 
 	MovableRect();
 	~MovableRect();
