@@ -1,0 +1,151 @@
+Sprite player
+R	G	B
+255	123	234	165
+Animation Count
+14
+
+
+Name
+START
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+46			28			16				32				0			0
+
+
+Name
+INJURED
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+86			29			16				29				0			0
+
+
+Name
+DIE
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+118			36			32				15				0			0
+
+
+Name
+STAND
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+46			68			16				32				0			0
+
+
+Name
+RUN
+Frame Count
+2
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+88				68				12				32				0			0
+126				68				15				32				0			0
+
+
+Name
+JUMP
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+158			72			30				23				0			0
+
+
+Name
+ATTACK
+Frame Count
+3
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+33				117				32				32				0			0
+94				117				16				32				0			0
+152				117				28				32				0			0
+	
+
+Name
+SIT_ATTACK
+Frame Count
+3
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+46				161				30				23				0			0
+86				161				30				23				0			0
+150				161				30				23				0			0
+			
+
+Name
+UPSTAIR
+Frame Count
+3
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+38				197				32				31				0			0
+78				197				32				31				0			0
+42				233				120				31				0			0
+
+
+
+
+Name
+DOWNSTAIR
+Frame Count
+2
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+78				69				30				32				0			0
+14				516				30				32				0			0
+
+
+Name
+UPSTAIR_ATTACK
+Frame Count
+2
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+62				67				60				35				0			0
+45				514				50				35				0			0
+
+
+
+Name
+DOWN_STAIR
+Frame Count
+3
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+102				513				30				32				0			0
+153				513				30				32				0			0
+177				513				30				32				0			0
+
+Name
+UPGRADE
+Frame Count
+3
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+104				557				50				35				0			0
+56				557				50				35				0			0
+6				557				50				35				0			0
+
+
+
+
+Name
+Animation
+Frame Count
+4
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+25				606				16				30				0			0
+48				606				16				30				0			0
+70				606				16				30				0			0
+94				606				16				30				0			0
