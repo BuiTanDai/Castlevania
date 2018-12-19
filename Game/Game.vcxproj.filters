@@ -97,6 +97,12 @@
     <Filter Include="Object\EndStair">
       <UniqueIdentifier>{be58cf5b-f4b5-4b12-8008-29844697eac3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Item">
+      <UniqueIdentifier>{72a4de05-f4b6-4121-bb30-7857b3bb7e25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Item\ItemHeart">
+      <UniqueIdentifier>{0ca9b361-3bc0-45bc-9dc9-7efeb11144cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -204,6 +210,12 @@
     <ClInclude Include="EndStair.h">
       <Filter>Object\EndStair</Filter>
     </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemHeart.h">
+      <Filter>Object\Item\ItemHeart</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -298,6 +310,12 @@
     </ClCompile>
     <ClCompile Include="EndStair.cpp">
       <Filter>Object\EndStair</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemHeart.cpp">
+      <Filter>Object\Item\ItemHeart</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

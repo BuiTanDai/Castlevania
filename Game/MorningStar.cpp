@@ -109,6 +109,10 @@ void MorningStar::onIntersect(MovableRect * other)
 	{
 		other->setAlive(false);
 	}
+	if (other->getCollisionType() == COLLISION_ITEM)
+	{
+		other->setAlive(true);
+	}
 }
 
 void MorningStar::OnCollision()
@@ -123,6 +127,7 @@ MorningStar::MorningStar()
 	morningStarType = MORNINGSTAR_TYPE_1;
 	ifstream fs("assets/sprites/weapon/weapon.location.txt");
 	fs >> location[0].x >> location[0].y >> location[1].x >> location[1].y >> location[2].x >> location[2].y;
+	setCollisionType(COLLISION_TYPE_MORNING_STAR);
 }
 
 

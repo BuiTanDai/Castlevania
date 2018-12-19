@@ -31,6 +31,7 @@ SpriteManager::SpriteManager()
 	sprites[SPRITE_INFO_MORNINGSTAR]->InitFromFile("assets/sprites/weapon/image.png", "assets/sprites/weapon/weapon.info.dat");
 	sprites[SPRITE_INFO_PANTHER]->InitFromFile("assets/sprites/Enemies/panther/image.png", "assets/sprites/Enemies/panther/panther.info.dat");
 	sprites[SPRITE_INFO_PANTHER]->image->direction = TEXTURE_DIRECTION_LEFT;
+	sprites[SPRITE_INFO_ITEM_HEART]->InitFromFile("assets/sprites/Item/item_heart.png", "assets/sprites/Item/item_heart.info.dat");
 
 }
 SpriteManager::~SpriteManager()

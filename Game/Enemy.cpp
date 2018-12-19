@@ -17,14 +17,14 @@ void Enemy::onInitFromFile(fstream & fs)
 
 void Enemy::setDirectionFollowPlayer()
 {
-	/*if (Player::getInstance()->getMidX() - getMidX() < 0)
+	if (Player::getInstance()->getMidX() - getMidX() < 0)
 	{
 		setTextureDirection(TEXTURE_DIRECTION_LEFT);
 	}
 	else
 	{
 		setTextureDirection(TEXTURE_DIRECTION_RIGHT);
-	}*/
+	}
 }
 
 //void Enemy::onCollision(MovableRect * other, float collisionTime, int nx, int ny)

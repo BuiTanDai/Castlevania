@@ -11,6 +11,8 @@
 #include"Stair.h"
 #include"Panther.h"
 #include"EndStair.h"
+#include"ItemHeart.h"
+#include"Item.h"
 
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
@@ -57,6 +59,9 @@ void World::Init(const char * tilesheetPath,
 			break;
 		case SPRITE_INFO_PANTHER:
 			obj = new Panther();
+			break;
+		case SPRITE_INFO_ITEM_HEART:
+			obj = new ItemHeart();
 			break;
 
 		case -2:

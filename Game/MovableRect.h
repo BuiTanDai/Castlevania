@@ -8,6 +8,7 @@ class MovableRect :
 {
 	/* độ dời di chuyển của đối tượng */
 	bool alive;
+	bool isRender;
 	float dx, dy;
 	COLLISION_TYPE collisionType;
 public:
@@ -28,6 +29,9 @@ public:
 
 	bool getAlive();
 	void setAlive(bool alive);
+
+	bool getIsRender();
+	void setIsRender(bool isRender);
 
 	MovableRect();
 	~MovableRect();

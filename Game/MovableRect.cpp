@@ -31,6 +31,16 @@ void MovableRect::setAlive(bool alive)
 	this->alive = alive;
 }
 
+bool MovableRect::getIsRender()
+{
+	return isRender;
+}
+
+void MovableRect::setIsRender(bool isRender)
+{
+	this->isRender = isRender;
+}
+
 MovableRect::MovableRect()
 {
 	dx = 0;
