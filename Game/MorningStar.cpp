@@ -113,6 +113,11 @@ void MorningStar::onIntersect(MovableRect * other)
 	{
 		other->setAlive(true);
 	}
+	if (other->getCollisionType() == COLLISION_TYPE_STATIC_OBJECT || other->getCollisionType() == COLLISION_TYPE_ENEMY)
+	{
+		ExplosionEffect* explosion = new ExplosionEffect();
+		explosion->setLocation(other->getMidX(), other->getMidY());
+	}
 }
 
 void MorningStar::OnCollision()

@@ -28,6 +28,7 @@
     <ClInclude Include="CollisionTypeCollide.h" />
     <ClInclude Include="EndStair.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="ExplosionEffect.h" />
     <ClInclude Include="Fire.h" />
     <ClInclude Include="FrameAnimation.h" />
     <ClInclude Include="Game.h" />
@@ -65,6 +66,7 @@
     <ClCompile Include="Collision.cpp" />
     <ClCompile Include="EndStair.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="ExplosionEffect.cpp" />
     <ClCompile Include="Fire.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameConfiguration.cpp" />

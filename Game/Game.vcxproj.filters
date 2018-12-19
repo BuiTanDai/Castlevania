@@ -216,6 +216,9 @@
     <ClInclude Include="ItemHeart.h">
       <Filter>Object\Item\ItemHeart</Filter>
     </ClInclude>
+    <ClInclude Include="ExplosionEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -316,6 +319,9 @@
     </ClCompile>
     <ClCompile Include="ItemHeart.cpp">
       <Filter>Object\Item\ItemHeart</Filter>
+    </ClCompile>
+    <ClCompile Include="ExplosionEffect.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

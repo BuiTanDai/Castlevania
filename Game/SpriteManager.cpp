@@ -32,7 +32,8 @@ SpriteManager::SpriteManager()
 	sprites[SPRITE_INFO_PANTHER]->InitFromFile("assets/sprites/Enemies/panther/image.png", "assets/sprites/Enemies/panther/panther.info.dat");
 	sprites[SPRITE_INFO_PANTHER]->image->direction = TEXTURE_DIRECTION_LEFT;
 	sprites[SPRITE_INFO_ITEM_HEART]->InitFromFile("assets/sprites/Item/item_heart.png", "assets/sprites/Item/item_heart.info.dat");
-
+	sprites[SPRITE_INFO_EXPLOSION_EFFECT]->InitFromFile("assets/sprites/candle/image.png", "assets/sprites/candle/candle.info.dat");
+	//sprites[SPRITE_INFO_EXPLOSION_EFFECT]->InitFromFile("assets/sprites/ExplosionEffect/image.png", "assets/sprites/Explosion/explosion.info.dat");
 }
 SpriteManager::~SpriteManager()
 {
