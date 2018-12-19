@@ -13,6 +13,11 @@ void Item::onIntersect(MovableRect * other)
 			setState(ITEM_STATE_VISIBLE);
 		}
 	}
+	if (other->getCollisionType() == COLLISION_TYPE_PLAYER)
+	{
+		setAlive(false);
+		setState(ITEM_STATE_INVISIBLE);
+	}
 }
 
 void Item::setState(ITEM_STATE item_state)
@@ -25,11 +30,11 @@ void Item::update(float dt)
 	switch (item_state)
 	{
 	case ITEM_STATE_VISIBLE:
-		setAlive(true);
+		setIsRender(true);
 		setPhysicsEnable(true);
 		break;
 	case ITEM_STATE_INVISIBLE:
-		setAlive(false);
+		setIsRender(false);
 		setPhysicsEnable(false);
 		break;
 	default:

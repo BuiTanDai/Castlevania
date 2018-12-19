@@ -69,6 +69,11 @@ void BaseObject::update(float dt)
 		}
 	}
 
+	if (!getAlive())
+	{
+		setIsRender(false);
+	}
+
 	onUpdate(dt);
 }
 
@@ -79,7 +84,7 @@ void BaseObject::onUpdate(float dt)
 
 void BaseObject::render(Camera* camera)
 {
-	if (!getAlive())
+	if (!getIsRender())
 		return;
 	if (getSprite() == 0)
 	{

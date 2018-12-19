@@ -46,6 +46,7 @@ MovableRect::MovableRect()
 	dx = 0;
 	dy = 0;
 	alive = true;
+	isRender = true;
 }
 
 COLLISION_TYPE MovableRect::getCollisionType()
