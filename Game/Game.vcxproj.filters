@@ -94,6 +94,9 @@
     <Filter Include="Object\Scobar">
       <UniqueIdentifier>{ac14b560-ade6-4ab8-a722-94f35b9bc189}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\EndStair">
+      <UniqueIdentifier>{be58cf5b-f4b5-4b12-8008-29844697eac3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -198,6 +201,9 @@
     <ClInclude Include="ScoreBar.h">
       <Filter>Object\Scobar</Filter>
     </ClInclude>
+    <ClInclude Include="EndStair.h">
+      <Filter>Object\EndStair</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -289,6 +295,9 @@
     </ClCompile>
     <ClCompile Include="ScoreBar.cpp">
       <Filter>Object\Scobar</Filter>
+    </ClCompile>
+    <ClCompile Include="EndStair.cpp">
+      <Filter>Object\EndStair</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

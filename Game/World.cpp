@@ -10,6 +10,7 @@
 #include"Gate1.h"
 #include"Stair.h"
 #include"Panther.h"
+#include"EndStair.h"
 
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
@@ -64,6 +65,9 @@ void World::Init(const char * tilesheetPath,
 
 		case -3:
 			obj = new Stair();
+			break;
+		case -4:
+			obj = new EndStair();
 			break;
 		default:
 			obj = new BaseObject();
