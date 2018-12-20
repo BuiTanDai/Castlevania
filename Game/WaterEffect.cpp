@@ -5,11 +5,7 @@
 
 void WaterEffect::update(float dt)
 {
-	if (getIsLastFrameAnimationDone())
-	{
-		setAlive(false);
-	}
-	BaseObject::update(dt);
+	PhysicsObject::update(dt);
 }
 
 WaterEffect::WaterEffect()

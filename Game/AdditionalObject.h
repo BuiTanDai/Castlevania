@@ -1,8 +1,8 @@
 #pragma once
-#include "BaseObject.h"
+#include "PhysicsObject.h"
 #include "Camera.h"
 class AdditionalObject :
-	public BaseObject
+	public PhysicsObject
 {
 	static List<AdditionalObject*>* listObject;
 public:

@@ -12,7 +12,7 @@ void ExplosionEffect::update(float dt)
 
 ExplosionEffect::ExplosionEffect()
 {
-	//setAlive(false);
+	setPhysicsEnable(false);
 	setSprite(SPR(SPRITE_INFO_EXPLOSION_EFFECT));
 }
 

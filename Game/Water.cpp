@@ -11,15 +11,22 @@ void Water::onCollision(MovableRect * other, float collisionTime, int nx, int ny
 	{*/
 	WaterEffect* water = new WaterEffect();
 	water->setX(other->getX());
-	water->setY(other->getY() - 25);
+	water->setY(other->getY() + 15);
+	water->setVy(-150);
+	water->setVx(-40);
 
-	WaterEffect* water1 = new WaterEffect();
-	water1->setX(other->getX() - 20);
-	water1->setY(other->getY() - 25);
 
-	WaterEffect* water2 = new WaterEffect();
-	water2->setX(other->getX() + 20);
-	water2->setY(other->getY() - 25);
+	water = new WaterEffect();
+	water->setX(other->getX());
+	water->setY(other->getY() + 15);
+	water->setVy(-150);
+	water->setVx(0);
+
+	water = new WaterEffect();
+	water->setX(other->getX());
+	water->setY(other->getY() + 15);
+	water->setVy(-150);
+	water->setVx(40);
 
 	/*}*/
 	/*water->setVy(getGlobalValue("water_vy"));
