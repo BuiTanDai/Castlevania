@@ -112,6 +112,9 @@
     <Filter Include="Object\Item\ItemUpgrade">
       <UniqueIdentifier>{fa5a0221-10e9-48ac-b783-5958cb6e7524}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Water">
+      <UniqueIdentifier>{0581391b-b874-4c76-9243-68ba0499818f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -237,6 +240,12 @@
     <ClInclude Include="ItemUpgrade.h">
       <Filter>Object\Item\ItemUpgrade</Filter>
     </ClInclude>
+    <ClInclude Include="Water.h">
+      <Filter>Object\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="WaterEffect.h">
+      <Filter>Object\Water</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -349,6 +358,12 @@
     </ClCompile>
     <ClCompile Include="ItemUpgrade.cpp">
       <Filter>Object\Item\ItemUpgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterEffect.cpp">
+      <Filter>Object\Water</Filter>
+    </ClCompile>
+    <ClCompile Include="Water.cpp">
+      <Filter>Object\Water</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

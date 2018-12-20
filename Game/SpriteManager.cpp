@@ -38,6 +38,8 @@ SpriteManager::SpriteManager()
 	sprites[SPRITE_INFO_EXPLOSION_EFFECT]->InitFromFile("assets/sprites/effect/image.png", "assets/sprites/effect/explosion.info.dat");
 	//sprites[SPRITE_INFO_ITEM_UPGRADE]->InitFromFile("assets/sprites/candle/image.png", "assets/sprites/candle/candle.info.dat");
 	sprites[SPRITE_INFO_ITEM_UPGRADE]->InitFromFile("assets/sprites/Item/item_upgrade/image.png", "assets/sprites/Item/item_upgrade/item_upgrade.info.dat");
+	sprites[SPRITE_INFO_WATER_EFFECT]->InitFromFile("assets/sprites/water/image.png", "assets/sprites/water/water.info.dat");
+
 }
 SpriteManager::~SpriteManager()
 {

@@ -10,6 +10,10 @@
 /* ta tạo 1 sprite info để lưu thông tin của các sprite */
 enum SPRITE_INFO
 {
+	SPRITE_INFO_WATER = -5,
+	SPRITE_INFO_ENDSTAIR = -4,
+	SPRITE_INFO_STAIR = -3,
+	SPRITE_INFO_GATE1 = -2,
 	/* đối tượng không có hình ảnh ta sẽ đặt số âm */
 	SPRITE_INFO_GROUND = -1,
 	/* đối tượng có hình ảnh ta sẽ đặt số dương */
@@ -34,6 +38,7 @@ enum SPRITE_INFO
 	SPRITE_INFO_EXPLOSION_EFFECT = 8,
 
 	SPRITE_INFO_MORNINGSTAR = 9,
+	SPRITE_INFO_WATER_EFFECT = 10,
 
 	SPRITE_COUNT
 };

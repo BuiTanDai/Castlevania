@@ -57,6 +57,8 @@
     <ClInclude Include="SpriteManager.h" />
     <ClInclude Include="Stair.h" />
     <ClInclude Include="Tilemap.h" />
+    <ClInclude Include="Water.h" />
+    <ClInclude Include="WaterEffect.h" />
     <ClInclude Include="WindowGame.h" />
     <ClInclude Include="World.h" />
     <ClInclude Include="Zombie.h" />
@@ -95,6 +97,8 @@
     <ClCompile Include="SpriteManager.cpp" />
     <ClCompile Include="Stair.cpp" />
     <ClCompile Include="Tilemap.cpp" />
+    <ClCompile Include="Water.cpp" />
+    <ClCompile Include="WaterEffect.cpp" />
     <ClCompile Include="WindowGame.cpp" />
     <ClCompile Include="WinMain.cpp" />
     <ClCompile Include="World.cpp" />

@@ -2,14 +2,11 @@
 
 
 
-Zombie::Zombie()
-{
-}
 
-//void Zombie::setZombieState(ZOMBIE_STATE zombieState)
-//{
-//	this->zombieState = zombieState;
-//}
+void Zombie::setZombieState(ZOMBIE_STATE zombieState)
+{
+	this->zombieState = zombieState;
+}
 
 void Zombie::onInitFormFile(fstream & fs)
 {
@@ -46,10 +43,44 @@ void Zombie::onCollision(MovableRect * other, float collisionTime, int nx, int n
 
 void Zombie::update(float dt)
 {
-	setVx(-40);
-	Enemy::update(dt);
+	switch (zombieState)
+	{
+	case ZOMBIE_STATE_INVISIBLE:
+		setVx(0);
+		if (abs(Player::getInstance()->getMidX() - getMidX()) < 100)
+		{
+			setZombieState(ZOMBIE_STATE_VISIBLE);
+			setPhysicsEnable(true);
+
+
+			//setIsOnGround(true);
+
+		}
+		break;
+	case ZOMBIE_STATE_VISIBLE:
+
+		setIsRender(true);
+
+		setAnimation(ZOMBIE_ACTION_RUN);
+		setVx(-40);
+		Enemy::update(dt);
+
+		break;
+
+	default:
+		break;
+		//setVx(-40);
+
+	}
 }
 
+
+Zombie::Zombie()
+{
+	setZombieState(ZOMBIE_STATE_INVISIBLE);
+	setIsRender(false);
+	setPhysicsEnable(false);
+}
 Zombie::~Zombie()
 {
 }

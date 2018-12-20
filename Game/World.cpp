@@ -16,6 +16,7 @@
 #include"AdditionalObject.h"
 #include"Aquaman.h"
 #include"ItemUpgrade.h"
+#include"Water.h"
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
 	const char * objectsPath,
@@ -81,6 +82,9 @@ void World::Init(const char * tilesheetPath,
 			break;
 		case -4:
 			obj = new EndStair();
+			break;
+		case -5:
+			obj = new Water();
 			break;
 		default:
 			obj = new BaseObject();
