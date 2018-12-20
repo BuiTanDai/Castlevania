@@ -14,6 +14,7 @@ class Item :
 public:
 	void onIntersect(MovableRect* other) override;
 	void setState(ITEM_STATE item_state);
+	ITEM_STATE getState();
 	void update(float dt) override;
 	Item();
 	~Item();

@@ -111,7 +111,6 @@ FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
 45				514				50				35				0			0
 
 
-
 Name
 UPSTAIR_ATTACK
 Frame Count
@@ -122,6 +121,7 @@ FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
 153				513				30				32				0			0
 177				513				30				32				0			0
 
+
 Name
 DOWN_STAIR
 Frame Count
@@ -131,8 +131,6 @@ FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
 104				557				50				35				0			0
 56				557				50				35				0			0
 6				557				50				35				0			0
-
-
 
 
 Name

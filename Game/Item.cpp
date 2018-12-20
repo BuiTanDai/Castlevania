@@ -13,7 +13,7 @@ void Item::onIntersect(MovableRect * other)
 			setState(ITEM_STATE_VISIBLE);
 		}
 	}
-	if (other->getCollisionType() == COLLISION_TYPE_PLAYER)
+	if (other->getCollisionType() == COLLISION_TYPE_PLAYER && getState()== ITEM_STATE_VISIBLE)
 	{
 		setAlive(false);
 		setState(ITEM_STATE_INVISIBLE);
@@ -23,6 +23,11 @@ void Item::onIntersect(MovableRect * other)
 void Item::setState(ITEM_STATE item_state)
 {
 	this->item_state = item_state;
+}
+
+ITEM_STATE Item::getState()
+{
+	return item_state;
 }
 
 void Item::update(float dt)

@@ -166,6 +166,20 @@ void Player::onUpdate(float dt)
 			}
 			break;
 		}
+		case PLAYER_STATE_UPGRADE:
+			if (getAnimation() != PLAYER_UPGRADE)
+			{
+				setVx(0);
+				setVx(0);
+				setAnimation(PLAYER_UPGRADE);
+			}
+			else
+			{
+				if(getIsLastFrameAnimationDone())
+				{
+					setPlayerState(PLAYER_STATE_NORMAL);
+				}
+			}
 	default:
 		break;
 	}
