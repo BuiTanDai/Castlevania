@@ -9,12 +9,11 @@ void Panther::setPantherState(PANTHER_STATE pantherState)
 
 void Panther::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
 {
-
-
-	if (ny == 1)
+	if (ny == -1)
 	{
-		Enemy::onCollision(other, nx, ny, collisionTime);
+		Enemy::onCollision(other, collisionTime, nx, ny);
 	}
+
 	if (other->getCollisionType() == COLLISION_TYPE_GROUND && ny == -1 && pantherState == PANTHER_STATE_RUN &&
 		((getDx() < 0 && getleft() <= other->getleft()) ||
 		(getDx() > 0 && getRight() >= other->getRight()))
@@ -22,12 +21,20 @@ void Panther::onCollision(MovableRect * other, float collisionTime, int nx, int 
 	{
 		setPantherState(PANTHER_STATE_JUMP);
 		setDy(0);
-		setIsOnGround(false);
+
+		//setDirectionFollowPlayer();
 		setVy(-120);
 		setVx(getTextureDirection() * 140);
+		setIsOnGround(false);
+
 	}
 
-	PhysicsObject::onCollision(other, collisionTime, nx, ny);
+
+
+
+
+
+
 
 
 
@@ -54,16 +61,24 @@ void Panther::update(float dt)
 		break;
 	case PANTHER_STATE_JUMP:
 		setAnimation(PANTHER_ACTION_JUMP);
+
 		if (getIsOnGround())
 		{
+			//setPhysicsEnable(true);
 			setPantherState(PANTHER_STATE_RUN);
 			setDirectionFollowPlayer();
-			setVx(getTextureDirection() * 100);
+			setVx(getTextureDirection() * 80);
 		}
 		break;
 	case PANTHER_STATE_RUN:
+		/*	if (abs(getMidX() - Player::getInstance()->getMidX()) > 20)
+			{
+				setPantherState(PANTHER_STATE_RUN);
+
+			}*/
+			//setDirectionFollowPlayer();
 		setAnimation(PANTHER_ACTION_RUN);
-		setVx(getTextureDirection() * 100);
+		setVx(getTextureDirection() * 140);
 		break;
 	default:
 		break;

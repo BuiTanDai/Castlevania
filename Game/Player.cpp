@@ -86,7 +86,7 @@ void Player::onUpdate(float dt)
 			if (keyJumpDown)
 			{
 				setIsOnGround(false);
-				setVy(-120);
+				setVy(-260);
 				setAnimation(PLAYER_STAND);
 
 			}

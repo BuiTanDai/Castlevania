@@ -106,6 +106,12 @@
     <Filter Include="Object\ExplosionEffect">
       <UniqueIdentifier>{840870db-d219-4a64-a162-fbd4ce731829}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Enemy\Aquaman">
+      <UniqueIdentifier>{e4778d0d-08f6-447c-a3ff-72358f5153af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Item\ItemUpgrade">
+      <UniqueIdentifier>{fa5a0221-10e9-48ac-b783-5958cb6e7524}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -225,6 +231,12 @@
     <ClInclude Include="AdditionalObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Aquaman.h">
+      <Filter>Object\Enemy\Aquaman</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemUpgrade.h">
+      <Filter>Object\Item\ItemUpgrade</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -331,6 +343,12 @@
     </ClCompile>
     <ClCompile Include="AdditionalObject.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Aquaman.cpp">
+      <Filter>Object\Enemy\Aquaman</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemUpgrade.cpp">
+      <Filter>Object\Item\ItemUpgrade</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

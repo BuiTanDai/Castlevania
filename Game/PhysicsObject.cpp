@@ -106,11 +106,11 @@ void PhysicsObject::onCollision(MovableRect * other, float collisionTime, int nx
 		if (ny == -1)
 		{
 			setIsOnGround(true);
-			setVy(0);
+			
 		}
-		if (ny == 1)
+		if (ny !=0)
 		{
-			setVy(0);
+			setVy(10);
 		}
 		preventMovementWhenCollision(collisionTime, nx, ny);
 	}

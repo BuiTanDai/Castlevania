@@ -14,7 +14,8 @@
 #include"ItemHeart.h"
 #include"Item.h"
 #include"AdditionalObject.h"
-
+#include"Aquaman.h"
+#include"ItemUpgrade.h"
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
 	const char * objectsPath,
@@ -63,6 +64,12 @@ void World::Init(const char * tilesheetPath,
 			break;
 		case SPRITE_INFO_ITEM_HEART:
 			obj = new ItemHeart();
+			break;
+		case SPRITE_INFO_MERMAN:
+			obj = new Aquaman();
+			break;
+		case SPRITE_INFO_ITEM_UPGRADE:
+			obj = new ItemUpgrade();
 			break;
 
 		case -2:
