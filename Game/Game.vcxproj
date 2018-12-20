@@ -19,14 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdditionalObject.h" />
     <ClInclude Include="Animation.h" />
+    <ClInclude Include="Aquaman.h" />
     <ClInclude Include="BaseObject.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Candle.h" />
     <ClInclude Include="Collision.h" />
     <ClInclude Include="CollisionType.h" />
     <ClInclude Include="CollisionTypeCollide.h" />
+    <ClInclude Include="EndStair.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="ExplosionEffect.h" />
     <ClInclude Include="Fire.h" />
     <ClInclude Include="FrameAnimation.h" />
     <ClInclude Include="Game.h" />
@@ -36,6 +40,8 @@
     <ClInclude Include="GameTime.h" />
     <ClInclude Include="GameUtils.h" />
     <ClInclude Include="Gate1.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemHeart.h" />
     <ClInclude Include="KEY.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="MorningStar.h" />
@@ -55,12 +61,16 @@
     <ClInclude Include="Zombie.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AdditionalObject.cpp" />
     <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Aquaman.cpp" />
     <ClCompile Include="BaseObject.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Candle.cpp" />
     <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="EndStair.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="ExplosionEffect.cpp" />
     <ClCompile Include="Fire.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameConfiguration.cpp" />
@@ -69,6 +79,8 @@
     <ClCompile Include="GameTime.cpp" />
     <ClCompile Include="GameUtils.cpp" />
     <ClCompile Include="Gate1.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemHeart.cpp" />
     <ClCompile Include="KEY.cpp" />
     <ClCompile Include="MorningStar.cpp" />
     <ClCompile Include="MovableRect.cpp" />

@@ -1,6 +1,7 @@
 #pragma once
 #include "BaseObject.h"
 #include "Camera.h"
+#include"ExplosionEffect.h"
 
 enum MORNINGSTAR_TYPE
 {
@@ -27,6 +28,7 @@ public:
 	RopeLocation location[3];
 	void update(float dt) override;
 	void render(Camera* camera) override;
+	void onIntersect(MovableRect* other) override;
 	void OnCollision();
 	MorningStar();
 	~MorningStar();

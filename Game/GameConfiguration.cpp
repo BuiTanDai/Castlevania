@@ -22,13 +22,13 @@ double GameConfiguration::GetConfiguration(const char * key)
 		globalsConfigurationDouble->insert(pair<const char*, double>("backbuffer_height", 224));
 
 		/* fps là frame_per_second càng lớn càng mượt nhưng nó sử dụng nhiều cpu hơn */
-		globalsConfigurationDouble->insert(pair<const char*, double>("fps", 70));
+		globalsConfigurationDouble->insert(pair<const char*, double>("fps", 50));
 
 		/* thời gian đổi frame mặc định của animation là 100 milis, cứ sau 100 milis thì animation sẽ đổi 1 frame */
 		globalsConfigurationDouble->insert(pair<const char*, double>("object_animation_time_default", 100));
 
 		/* trọng lực mặc định của đối tượng 80 (px/s^2) */
-		globalsConfigurationDouble->insert(pair<const char*, double>("object_default_ay", 200));
+		globalsConfigurationDouble->insert(pair<const char*, double>("object_default_ay", 750));
 
 		globalsConfigurationDouble->insert(pair<const char*, double>("player_vx", 120));
 		globalsConfigurationDouble->insert(pair<const char*, double>("player_vy_jump", 120));

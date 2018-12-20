@@ -24,9 +24,13 @@ void Player::onUpdate(float dt)
 	keyAttackPress = KEY::getInstance()->isAttackPress;
 
 	float vx = GLOBALS_D("player_vx");
+	
 
-
+	switch (player_state)
+	{
+	case PLAYER_STATE_NORMAL:
 		//mặt đất
+		setPhysicsEnable(true);
 		if (getIsOnGround())
 		{
 			/* nếu nhấn key trái */
@@ -45,6 +49,7 @@ void Player::onUpdate(float dt)
 			}
 			else if (keyDownDown)
 			{
+				//setHeight(23);
 				if (keyAttackPress)
 				{
 					setVx(0);
@@ -56,7 +61,6 @@ void Player::onUpdate(float dt)
 					setVx(0);
 					setAnimation(PLAYER_JUMP);
 				}
-
 			}
 			else if (keyAttackPress & getDx() == 0 & getVx() == 0)
 			{
@@ -82,13 +86,20 @@ void Player::onUpdate(float dt)
 			if (keyJumpDown)
 			{
 				setIsOnGround(false);
-				setVy(-120);
+				setVy(-360);
 				setAnimation(PLAYER_STAND);
 
 			}
 		}
+		else if (getIsOnStair())
+		{
+			setPlayerState(PLAYER_STATE_ON_STAIR);
+			
+
+		}
 		else
 		{
+			setPhysicsEnable(true);
 			//trên không
 			if (keyLeftDown)
 			{
@@ -103,12 +114,12 @@ void Player::onUpdate(float dt)
 				setTextureDirection(TEXTURE_DIRECTION_RIGHT);
 			}
 			else if (keyAttackPress)
-				{
-					setIsAttacking(true);
-					setVx(0);
-					setAnimation(PLAYER_ATTACK);
-					usingMorningStar();
-				}
+			{
+				setIsAttacking(true);
+				setVx(0);
+				setAnimation(PLAYER_ATTACK);
+				usingMorningStar();
+			}
 			else if (getIsAttacking())
 			{
 				if (getIsLastFrameAnimationDone())
@@ -119,14 +130,46 @@ void Player::onUpdate(float dt)
 				}
 			}
 			else
-			{ 
+			{
 				setAnimation(PLAYER_STAND);
 				setVx(0);
 			}
-			
+
 		}
+		break;
+
+		case PLAYER_STATE_ON_STAIR:
+		{
+			setIsOnStair(true);
+			//trường hợp đang rời khỏi cầu thang
+			if (getIsMovingStair())
+			{
+				setIsOnStair(false);
+				setIsMoveUp(false);
+				setIsMovingStair(false);
+				setPlayerState(PLAYER_STATE_NORMAL);
+				return;
+			}
+
+			if (keyUpDown && keyRightDown)
+			{
+				setPhysicsEnable(false);
+				setAnimation(PLAYER_UPSTAIR);
+				setDx(2);
+				setDy(-2);
+			}
+			else{
+				setDx(0);
+				setDy(0);
+				setPhysicsEnable(false);
+				setAnimation(PLAYET_STAND_STAIR_UP);
+			}
+			break;
+		}
+	default:
+		break;
+	}
 	
-		
 
 
 	PhysicsObject::onUpdate(dt);
@@ -150,29 +193,78 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
 	}
 
-	/*if (other->getCollisionType() == COLLISION_TYPE_STAIR)
-	{
-		preventMovementWhenCollision(collisionTime, nx, ny);
-		PhysicsObject::onCollision(other, collisionTime, nx, ny);
-	}*/
-
 	if (other->getCollisionType() == COLLISION_TYPE_ENEMY)
 	{
-		setDx(0);
+		PhysicsObject::onCollision(other, collisionTime, nx, ny);
+	}
+
+	if (other->getCollisionType() == COLLISION_TYPE_STATIC_OBJECT)
+	{
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
 	}
 	
 }
+
+void Player::onIntersect(MovableRect * other)
+{
+	if (other->getCollisionType() == COLLISION_TYPE_ENEMY)
+	{
+
+	}
+}
+
+
 
 void Player::usingMorningStar()
 {
 	MorningStar::getInstance()->setAlive(true);
 }
 
+bool Player::getIsOnStair()
+{
+	return isOnStair;
+}
+
+void Player::setIsOnStair(bool isOnStair)
+{
+	this->isOnStair = isOnStair;
+}
+
+void Player::setPlayerState(PLAYER_STATE player_state)
+{
+	this->player_state = player_state;
+}
+
+PLAYER_STATE Player::getPlayerState()
+{
+	return player_state;
+}
+
+void Player::setIsMoveUp(bool moveup)
+{
+	this->isMoveUp = moveup;
+}
+
+bool Player::getIsMoveUp()
+{
+	return isMoveUp;
+}
+
+void Player::setIsMovingStair(bool isMovingStair)
+{
+	this->isMovingStair = isMovingStair;
+}
+
+bool Player::getIsMovingStair()
+{
+	return isMovingStair;
+}
+
 Player::Player()
 {
 	setSprite(SPR(SPRITE_INFO_SIMON));
 	setTextureDirection(TEXTURE_DIRECTION_RIGHT);
+	setCollisionType(COLLISION_TYPE_PLAYER);
 }
 
 

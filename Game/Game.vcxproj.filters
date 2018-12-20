@@ -91,6 +91,24 @@
     <Filter Include="Object\Enemy\Zombie">
       <UniqueIdentifier>{41aad217-0c6d-4c00-bcdc-1513c59ff2a1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Scobar">
+      <UniqueIdentifier>{ac14b560-ade6-4ab8-a722-94f35b9bc189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\EndStair">
+      <UniqueIdentifier>{be58cf5b-f4b5-4b12-8008-29844697eac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Item">
+      <UniqueIdentifier>{72a4de05-f4b6-4121-bb30-7857b3bb7e25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Item\ItemHeart">
+      <UniqueIdentifier>{0ca9b361-3bc0-45bc-9dc9-7efeb11144cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\ExplosionEffect">
+      <UniqueIdentifier>{840870db-d219-4a64-a162-fbd4ce731829}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Aquaman">
+      <UniqueIdentifier>{e4778d0d-08f6-447c-a3ff-72358f5153af}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -186,14 +204,32 @@
     <ClInclude Include="Stair.h">
       <Filter>Object\Stair</Filter>
     </ClInclude>
-    <ClInclude Include="ScoreBar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Object\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="Panther.h">
       <Filter>Object\Enemy\Panther</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreBar.h">
+      <Filter>Object\Scobar</Filter>
+    </ClInclude>
+    <ClInclude Include="EndStair.h">
+      <Filter>Object\EndStair</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemHeart.h">
+      <Filter>Object\Item\ItemHeart</Filter>
+    </ClInclude>
+    <ClInclude Include="ExplosionEffect.h">
+      <Filter>Object\ExplosionEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="AdditionalObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Aquaman.h">
+      <Filter>Object\Enemy\Aquaman</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -278,14 +314,32 @@
     <ClCompile Include="Stair.cpp">
       <Filter>Object\Stair</Filter>
     </ClCompile>
-    <ClCompile Include="ScoreBar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="Panther.cpp">
       <Filter>Object\Enemy\Panther</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreBar.cpp">
+      <Filter>Object\Scobar</Filter>
+    </ClCompile>
+    <ClCompile Include="EndStair.cpp">
+      <Filter>Object\EndStair</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemHeart.cpp">
+      <Filter>Object\Item\ItemHeart</Filter>
+    </ClCompile>
+    <ClCompile Include="ExplosionEffect.cpp">
+      <Filter>Object\ExplosionEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="AdditionalObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Aquaman.cpp">
+      <Filter>Object\Enemy\Aquaman</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

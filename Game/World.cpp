@@ -10,7 +10,11 @@
 #include"Gate1.h"
 #include"Stair.h"
 #include"Panther.h"
-
+#include"EndStair.h"
+#include"ItemHeart.h"
+#include"Item.h"
+#include"AdditionalObject.h"
+#include"Aquaman.h"
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
 	const char * objectsPath,
@@ -57,6 +61,12 @@ void World::Init(const char * tilesheetPath,
 		case SPRITE_INFO_PANTHER:
 			obj = new Panther();
 			break;
+		case SPRITE_INFO_ITEM_HEART:
+			obj = new ItemHeart();
+			break;
+		case SPRITE_INFO_MERMAN:
+			obj = new Aquaman();
+			break;
 
 		case -2:
 			obj = new Gate1();
@@ -64,7 +74,10 @@ void World::Init(const char * tilesheetPath,
 
 		case -3:
 			obj = new Stair();
-
+			break;
+		case -4:
+			obj = new EndStair();
+			break;
 		default:
 			obj = new BaseObject();
 			break;
@@ -191,8 +204,23 @@ void World::update(float dt)
 	{
 		/* cập nhật đối tượng */
 		allObjects[i]->update(dt);
+		if (allObjects[i]->getAlive())
+		{
+			Collision::CheckCollision(Player::getInstance(), allObjects[i]);
+			Collision::CheckCollision(allObjects[i], Player::getInstance());
+		}
 		
-		Collision::CheckCollision(Player::getInstance(), allObjects[i]);
+	}
+
+	if (MorningStar::getInstance()->getAlive()) {
+		for (size_t i = 0; i < allObjects.Count; i++)
+		{
+			/* cập nhật đối tượng */
+			if (allObjects[i]->getAlive())
+			{
+				Collision::CheckCollision(MorningStar::getInstance(), allObjects[i]);
+			}
+		}
 	}
 
 	/* xét va chạm cho các loại đối tượng với nhau */
@@ -221,6 +249,7 @@ void World::update(float dt)
 	Camera::getInstance()->update();
 	if (MorningStar::getInstance()->getAlive())
 		MorningStar::getInstance()->update(dt);
+	AdditionalObject::listObjectUpdate(dt);
 }
 
 void World::render()
@@ -234,6 +263,7 @@ void World::render()
 	Player::getInstance()->render(Camera::getInstance());
 	if (MorningStar::getInstance()->getAlive())
 		MorningStar::getInstance()->render(Camera::getInstance());
+	AdditionalObject::listObjectRender(Camera::getInstance());
 }
 
 void World::setCurrentSpace(int spaceIndex)

@@ -27,9 +27,26 @@ void Enemy::setDirectionFollowPlayer()
 	}
 }
 
-void Enemy::onCollision(MovableRect * other, int nx, int ny, float collisionTime)
+//void Enemy::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
+//{
+//	/*if (other->getCollisionType() == COLLISION_TYPE_PLAYER)
+//	{
+//		auto player = Player::getInstance();
+//		player->setAnimation(PLAYER_INJURED);
+//		player->setDx(-5);
+//		player->setVy(-70);
+//	}*/
+//	PhysicsObject::onCollision(other, nx, ny, collisionTime);
+//}
+
+void Enemy::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
 {
-	PhysicsObject::onCollision(other, nx, ny, collisionTime);
+	PhysicsObject::onCollision(other, collisionTime, nx, ny);
+}
+
+void Enemy::onIntersect(MovableRect * other)
+{
+	
 }
 
 

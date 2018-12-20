@@ -130,6 +130,11 @@ void Collision::CheckCollision(MovableRect * M, MovableRect * S)
 	if (AABBCheck(broadPhaseBox, S))
 	{
 		delete broadPhaseBox; //*********************
+		if (AABBCheck(M, S))
+		{
+			M->onIntersect(S);
+			S->onIntersect(M);
+		}
 		float normalX = 0, normalY = 0;
 		/* tính collisionTime */
 		float collisionTime = SweptAABB(M, S, normalX, normalY);

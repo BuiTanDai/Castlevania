@@ -21,10 +21,32 @@ void MovableRect::onIntersect(MovableRect * other)
 {
 }
 
+bool MovableRect::getAlive()
+{
+	return alive;
+}
+
+void MovableRect::setAlive(bool alive)
+{
+	this->alive = alive;
+}
+
+bool MovableRect::getIsRender()
+{
+	return isRender;
+}
+
+void MovableRect::setIsRender(bool isRender)
+{
+	this->isRender = isRender;
+}
+
 MovableRect::MovableRect()
 {
 	dx = 0;
 	dy = 0;
+	alive = true;
+	isRender = true;
 }
 
 COLLISION_TYPE MovableRect::getCollisionType()

@@ -62,8 +62,7 @@ dt : thời gian giữa 2 khung hình game tính bằng giây dùng để tính 
 	float getWidthCurrentFrame();
 	float getHeightCurrentFrame();
 
-	bool getAlive();
-	void setAlive(bool alive);
+	
 
 	TEXTURE_DIRECTION getTextureDirection();
 	void setTextureDirection(TEXTURE_DIRECTION direction);

@@ -35,17 +35,13 @@ void Zombie::onInitFormFile(fstream & fs)
 
 void Zombie::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
 {
-
-	if (other->getCollisionType() == COLLISION_TYPE_GROUND)
-
+	if (other->getCollisionType() == COLLISION_TYPE_PLAYER)
 	{
-		/*preventMovementWhenCollision(collisionTime, nx, ny);*/
-		PhysicsObject::onCollision(other, collisionTime, nx, ny);
+		auto player = Player::getInstance();
+		player->setVy(-50);
+		player->setDx(-4);
 	}
-
-
-	/* ngăn chặn di chuyển */
-
+	Enemy::onCollision(other, collisionTime, nx, ny);
 }
 
 void Zombie::update(float dt)

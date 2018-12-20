@@ -4,6 +4,12 @@
 #include"KEY.h"
 #include"MorningStar.h"
 
+enum PLAYER_STATE
+{
+	PLAYER_STATE_NORMAL,
+	PLAYER_STATE_ON_STAIR
+};
+
 enum PLAYER_ACTION
 {
 	PLAYER_START,
@@ -15,6 +21,7 @@ enum PLAYER_ACTION
 	PLAYER_ATTACK,
 	PLAYER_SIT_ATTACK,
 	PLAYER_UPSTAIR,
+	PLAYET_STAND_STAIR_UP,
 	PLAYER_DOWNSTAIR,
 	PLAYER_UPSTAIR_ATTACK,
 	PLAYER_DOWNSTAIR_ATTACK,
@@ -25,11 +32,24 @@ class Player :
 	public PhysicsObject
 {
 	static Player* instance;
+	bool isOnStair;
+	bool isMoveUp;
+	bool isMovingStair;
+	PLAYER_STATE player_state;
 public:
 	static Player* getInstance();
 	void onUpdate(float dt) override;
 	void onCollision(MovableRect* other, float collisionTime, int nx, int ny) override;
+	void onIntersect(MovableRect* other) override;
 	void usingMorningStar();
+	bool getIsOnStair();
+	void setIsOnStair(bool isOnStair);
+	void setPlayerState(PLAYER_STATE player_state);
+	PLAYER_STATE getPlayerState();
+	void setIsMoveUp(bool moveup);
+	bool getIsMoveUp();
+	void setIsMovingStair(bool isMovingStair);
+	bool getIsMovingStair();
 	Player();
 	~Player();
 };

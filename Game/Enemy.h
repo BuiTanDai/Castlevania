@@ -11,11 +11,11 @@ public:
 	//void setHealth(int health);
 	//int getHealth();
 	void onInitFromFile(fstream& fs);
-	void setDirectionFollowPlayer();
+	virtual void setDirectionFollowPlayer();
 	/*virtual void onDeath();
 	virtual void onDecreaseHealth();*/
-	void onCollision(MovableRect* other, int nx, int ny, float collisionTime);
-	//void onIntersect(MovableRect* other) override;
+	void onCollision(MovableRect* other, float collisionTime, int nx, int ny) override;
+	void onIntersect(MovableRect* other) override;
 	//void resetLocation() override;
 	//virtual void onContactPlayer();
 	//virtual void onContactWeapon();

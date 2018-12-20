@@ -99,6 +99,27 @@ void MorningStar::render(Camera * camera)
 	BaseObject::render(camera);
 }
 
+void MorningStar::onIntersect(MovableRect * other)
+{
+	if (other->getCollisionType() == COLLISION_TYPE_STATIC_OBJECT)
+	{
+		other->setAlive(false);
+	}
+	if (other->getCollisionType() == COLLISION_TYPE_ENEMY)
+	{
+		other->setAlive(false);
+	}
+	if (other->getCollisionType() == COLLISION_ITEM)
+	{
+		other->setAlive(true);
+	}
+	if (other->getCollisionType() == COLLISION_TYPE_STATIC_OBJECT || other->getCollisionType() == COLLISION_TYPE_ENEMY)
+	{
+		ExplosionEffect* explosion = new ExplosionEffect();
+		explosion->setLocation(other->getMidX(), other->getMidY());
+	}
+}
+
 void MorningStar::OnCollision()
 {
 }
@@ -111,6 +132,7 @@ MorningStar::MorningStar()
 	morningStarType = MORNINGSTAR_TYPE_1;
 	ifstream fs("assets/sprites/weapon/weapon.location.txt");
 	fs >> location[0].x >> location[0].y >> location[1].x >> location[1].y >> location[2].x >> location[2].y;
+	setCollisionType(COLLISION_TYPE_MORNING_STAR);
 }
 
 
