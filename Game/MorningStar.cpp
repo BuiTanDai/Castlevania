@@ -1,4 +1,4 @@
-#include "MorningStar.h"
+﻿#include "MorningStar.h"
 #include"Player.h"
 
 MorningStar* MorningStar::instance = 0;
@@ -12,16 +12,30 @@ MorningStar * MorningStar::getInstance()
 }
 void MorningStar::setType(MORNINGSTAR_TYPE morningStarType)
 {
-	this->morningStarType = morningStarType;
+	this->currentMorningStarType = morningStarType;
+}
+
+void MorningStar::increaseType()
+{
+	if (currentMorningStarType + 1 < MORNINGSTAR_TYPE_COUNT)
+	{
+		if (currentMorningStarType == MORNINGSTAR_TYPE_3)
+		{
+			int a;
+		}
+		setType((MORNINGSTAR_TYPE)(currentMorningStarType + 1));
+	}
+	
 }
 
 MORNINGSTAR_TYPE MorningStar::getType()
 {
-	return this->morningStarType;
+	return this->currentMorningStarType;
 }
 
 void MorningStar::update(float dt)
 {
+	setAnimation(currentMorningStarType);
 	BaseObject::update(dt);
 	if (getIsLastFrameAnimationDone())
 	{
@@ -95,7 +109,7 @@ void MorningStar::render(Camera * camera)
 			break;
 		}
 	}
-	
+
 	BaseObject::render(camera);
 }
 
@@ -129,7 +143,7 @@ MorningStar::MorningStar()
 	setAlive(false);
 	setSprite(SPR(SPRITE_INFO_MORNINGSTAR));
 	setTextureDirection(TEXTURE_DIRECTION_RIGHT);
-	morningStarType = MORNINGSTAR_TYPE_1;
+	currentMorningStarType = MORNINGSTAR_TYPE_1;
 	ifstream fs("assets/sprites/weapon/weapon.location.txt");
 	fs >> location[0].x >> location[0].y >> location[1].x >> location[1].y >> location[2].x >> location[2].y;
 	setCollisionType(COLLISION_TYPE_MORNING_STAR);
