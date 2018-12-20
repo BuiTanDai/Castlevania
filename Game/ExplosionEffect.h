@@ -1,7 +1,7 @@
 #pragma once
-#include "BaseObject.h"
+#include "AdditionalObject.h"
 class ExplosionEffect :
-	public BaseObject
+	public AdditionalObject
 {
 public:
 	void update(float dt) override;

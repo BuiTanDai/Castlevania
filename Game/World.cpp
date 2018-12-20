@@ -13,6 +13,7 @@
 #include"EndStair.h"
 #include"ItemHeart.h"
 #include"Item.h"
+#include"AdditionalObject.h"
 
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
@@ -245,6 +246,7 @@ void World::update(float dt)
 	Camera::getInstance()->update();
 	if (MorningStar::getInstance()->getAlive())
 		MorningStar::getInstance()->update(dt);
+	AdditionalObject::listObjectUpdate(dt);
 }
 
 void World::render()
@@ -258,6 +260,7 @@ void World::render()
 	Player::getInstance()->render(Camera::getInstance());
 	if (MorningStar::getInstance()->getAlive())
 		MorningStar::getInstance()->render(Camera::getInstance());
+	AdditionalObject::listObjectRender(Camera::getInstance());
 }
 
 void World::setCurrentSpace(int spaceIndex)

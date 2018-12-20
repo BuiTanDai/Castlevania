@@ -24,7 +24,7 @@ void Player::onUpdate(float dt)
 	keyAttackPress = KEY::getInstance()->isAttackPress;
 
 	float vx = GLOBALS_D("player_vx");
-
+	
 
 	switch (player_state)
 	{
@@ -49,6 +49,7 @@ void Player::onUpdate(float dt)
 			}
 			else if (keyDownDown)
 			{
+				//setHeight(23);
 				if (keyAttackPress)
 				{
 					setVx(0);
@@ -60,7 +61,6 @@ void Player::onUpdate(float dt)
 					setVx(0);
 					setAnimation(PLAYER_JUMP);
 				}
-
 			}
 			else if (keyAttackPress & getDx() == 0 & getVx() == 0)
 			{
@@ -170,13 +170,6 @@ void Player::onUpdate(float dt)
 		break;
 	}
 	
-
-
-		
-
-		
-	
-		
 
 
 	PhysicsObject::onUpdate(dt);

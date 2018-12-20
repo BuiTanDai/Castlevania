@@ -103,6 +103,9 @@
     <Filter Include="Object\Item\ItemHeart">
       <UniqueIdentifier>{0ca9b361-3bc0-45bc-9dc9-7efeb11144cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\ExplosionEffect">
+      <UniqueIdentifier>{840870db-d219-4a64-a162-fbd4ce731829}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -217,6 +220,9 @@
       <Filter>Object\Item\ItemHeart</Filter>
     </ClInclude>
     <ClInclude Include="ExplosionEffect.h">
+      <Filter>Object\ExplosionEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="AdditionalObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -321,6 +327,9 @@
       <Filter>Object\Item\ItemHeart</Filter>
     </ClCompile>
     <ClCompile Include="ExplosionEffect.cpp">
+      <Filter>Object\ExplosionEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="AdditionalObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
