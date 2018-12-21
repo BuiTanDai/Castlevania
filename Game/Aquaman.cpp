@@ -1,6 +1,7 @@
 
 #include "Aquaman.h"
 #include "Player.h"
+#include"Bullet.h"
 
 
 
@@ -36,9 +37,6 @@ void Aquaman::onCollision(MovableRect * other, float collisionTime, int nx, int 
 
 
 }
-
-
-
 
 
 
@@ -79,19 +77,32 @@ void Aquaman::update(float dt)
 		setVx(50 * getTextureDirection());
 		Enemy::update(dt);
 
+		if (abs(Player::getInstance()->getMidX() - getMidX()) < 50)
+		{
+			setMermanState(MERMAN_STATE_ATTACK);
+			Bullet* bullet = new Bullet();
+			bullet->setX(getX());
+			bullet->setY(getY());
+			bullet->setTextureDirection(getTextureDirection());
+			bullet->setVx(getTextureDirection() * 150);
 
-		//setMermanState(MERMAN_STATE_ATTACK);
+		}
+
 
 		break;
-		/*case MERMAN_STATE_ATTACK:
-			setVx(0);
 
-			Enemy::update(dt);
+	case MERMAN_STATE_ATTACK:
 
-				setDirectionFollowPlayer();
-				setMermanState(MERMAN_STATE_RUN);
+		setVx(0);
+		setAnimation(MERMAN_ACTION_SHOOT);
+		setDirectionFollowPlayer();
 
-			break;*/
+		Enemy::update(dt);
+
+		if (abs(Player::getInstance()->getMidX() - getMidX()) > 50)
+			setMermanState(MERMAN_STATE_RUN);
+
+		break;
 	default:
 		break;
 	}

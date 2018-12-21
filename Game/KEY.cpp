@@ -22,6 +22,7 @@ void KEY::update()
 
 	isJumpDown = GetAsyncKeyState(getKeyChar('x'));
 	isAttackDown = GetAsyncKeyState(getKeyChar('z'));
+	isSubWeapon = GetAsyncKeyState(getKeyChar('c'));
 	isAttackPress = isAttackDown && !isPreviousAttackDown;
 	isPreviousAttackDown = isAttackDown;
 	

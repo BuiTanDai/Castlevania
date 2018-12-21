@@ -41,6 +41,9 @@ SpriteManager::SpriteManager()
 	sprites[SPRITE_INFO_WATER_EFFECT]->InitFromFile("assets/sprites/water/image.png", "assets/sprites/water/water.info.dat");
 	sprites[SPRITE_INFO_ITEMS_IN_SCORE_BAR]->InitFromFile("assets/sprites/misc/items.png", "assets/sprites/misc/items.info.dat");
 	//sprites[SPRITE_INFO_ITEMS_IN_SCORE_BAR]->InitFromFile("assets/sprites/water/image.png", "assets/sprites/water/water.info.dat");
+	sprites[SPRITE_INFO_KNIFE]->InitFromFile("assets/sprites/knife/image.png", "assets/sprites/knife/knife.info.dat");
+	sprites[SPRITE_INFO_BULLET]->InitFromFile("assets/sprites/bullet/image.png", "assets/sprites/bullet/bullet.info.dat");
+
 }
 SpriteManager::~SpriteManager()
 {

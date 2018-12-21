@@ -23,6 +23,7 @@
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Aquaman.h" />
     <ClInclude Include="BaseObject.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Candle.h" />
     <ClInclude Include="Collision.h" />
@@ -44,6 +45,7 @@
     <ClInclude Include="ItemHeart.h" />
     <ClInclude Include="ItemUpgrade.h" />
     <ClInclude Include="KEY.h" />
+    <ClInclude Include="Knife.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="MorningStar.h" />
     <ClInclude Include="MovableRect.h" />
@@ -68,6 +70,7 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Aquaman.cpp" />
     <ClCompile Include="BaseObject.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Candle.cpp" />
     <ClCompile Include="Collision.cpp" />
@@ -86,6 +89,7 @@
     <ClCompile Include="ItemHeart.cpp" />
     <ClCompile Include="ItemUpgrade.cpp" />
     <ClCompile Include="KEY.cpp" />
+    <ClCompile Include="Knife.cpp" />
     <ClCompile Include="MorningStar.cpp" />
     <ClCompile Include="MovableRect.cpp" />
     <ClCompile Include="Panther.cpp" />

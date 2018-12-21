@@ -15,6 +15,7 @@ public:
 		isAttackPress,
 		isPreviousAttackDown,
 		isJumpAttck,
+		isSubWeapon,
 
 		isNumber1Down,
 		isNumber2Down,

@@ -1,4 +1,5 @@
 ﻿#include "Player.h"
+#include"Knife.h"
 
 
 
@@ -14,17 +15,19 @@ Player * Player::getInstance()
 
 void Player::onUpdate(float dt)
 {
-	bool keyLeftDown, keyRightDown, keyUpDown, keyDownDown, keyJumpDown, keyAttackPress;
+	bool keyLeftDown, keyRightDown, keyUpDown, keyDownDown, keyJumpDown, keyAttackPress, keySubWeapon;
 	keyLeftDown = KEY::getInstance()->isLeftDown;
 	keyRightDown = KEY::getInstance()->isRightDown;
 	keyUpDown = KEY::getInstance()->isUpDown;
 	keyDownDown = KEY::getInstance()->isDownDown;
+	keySubWeapon = KEY::getInstance()->isSubWeapon;
+
 
 	keyJumpDown = KEY::getInstance()->isJumpDown;
 	keyAttackPress = KEY::getInstance()->isAttackPress;
 
 	float vx = GLOBALS_D("player_vx");
-	
+
 
 	switch (player_state)
 	{
@@ -47,6 +50,32 @@ void Player::onUpdate(float dt)
 				setAnimation(PLAYER_RUN);
 				setTextureDirection(TEXTURE_DIRECTION_RIGHT);
 			}
+
+			else if (keySubWeapon)
+			{
+				setAnimation(PLAYER_ATTACK);
+				Knife* knife = new Knife();
+				knife->setAlive(true);
+				if (this->getTextureDirection() == TEXTURE_DIRECTION_LEFT)
+				{
+					knife->setTextureDirection(TEXTURE_DIRECTION_RIGHT);
+					knife->setX(this->getX() - 8);
+					this->setVx(0);
+				}
+				else
+				{
+					knife->setTextureDirection(TEXTURE_DIRECTION_LEFT);
+					knife->setX(this->getX() + 23);
+					this->setVx(0);
+				}
+
+
+				knife->setY(this->getY() + 12);
+				knife->setVx(getTextureDirection() * 150);
+				setIsAttacking(true);
+
+			}
+
 			else if (keyDownDown)
 			{
 				//setHeight(23);
@@ -61,6 +90,9 @@ void Player::onUpdate(float dt)
 					setVx(0);
 					setAnimation(PLAYER_JUMP);
 				}
+
+
+
 			}
 			else if (keyAttackPress & getDx() == 0 & getVx() == 0)
 			{
@@ -82,7 +114,7 @@ void Player::onUpdate(float dt)
 				setVx(0);
 				setAnimation(PLAYER_STAND);
 			}
-
+			;
 			if (keyJumpDown)
 			{
 				setIsOnGround(false);
@@ -94,7 +126,7 @@ void Player::onUpdate(float dt)
 		else if (getIsOnStair())
 		{
 			setPlayerState(PLAYER_STATE_ON_STAIR);
-			
+
 
 		}
 		else
@@ -138,64 +170,64 @@ void Player::onUpdate(float dt)
 		}
 		break;
 
-		case PLAYER_STATE_ON_STAIR:
+	case PLAYER_STATE_ON_STAIR:
+	{
+		setIsOnStair(true);
+		//trường hợp đang rời khỏi cầu thang
+		if (getIsMovingStair())
 		{
-			setIsOnStair(true);
-			//trường hợp đang rời khỏi cầu thang
-			if (getIsMovingStair())
-			{
-				setIsOnStair(false);
-				setIsMoveUp(false);
-				setIsMovingStair(false);
-				setPlayerState(PLAYER_STATE_NORMAL);
-				return;
-			}
-
-			if (keyUpDown && keyRightDown)
-			{
-				setPhysicsEnable(false);
-				setAnimation(PLAYER_UPSTAIR);
-				setDx(2);
-				setDy(-2);
-			}
-			else{
-				setDx(0);
-				setDy(0);
-				setPhysicsEnable(false);
-				setAnimation(PLAYET_STAND_STAIR_UP);
-			}
-			break;
+			setIsOnStair(false);
+			setIsMoveUp(false);
+			setIsMovingStair(false);
+			setPlayerState(PLAYER_STATE_NORMAL);
+			return;
 		}
-		case PLAYER_STATE_UPGRADE:
-			if (getAnimation() != PLAYER_UPGRADE)
+
+		if (keyUpDown && keyRightDown)
+		{
+			setPhysicsEnable(false);
+			setAnimation(PLAYER_UPSTAIR);
+			setDx(2);
+			setDy(-2);
+		}
+		else {
+			setDx(0);
+			setDy(0);
+			setPhysicsEnable(false);
+			setAnimation(PLAYET_STAND_STAIR_UP);
+		}
+		break;
+	}
+	case PLAYER_STATE_UPGRADE:
+		if (getAnimation() != PLAYER_UPGRADE)
+		{
+			setVx(0);
+			setVx(0);
+			setAnimation(PLAYER_UPGRADE);
+		}
+		else
+		{
+			if (getIsLastFrameAnimationDone())
 			{
-				setVx(0);
-				setVx(0);
-				setAnimation(PLAYER_UPGRADE);
+				setPlayerState(PLAYER_STATE_NORMAL);
 			}
-			else
-			{
-				if(getIsLastFrameAnimationDone())
-				{
-					setPlayerState(PLAYER_STATE_NORMAL);
-				}
-			}
+		}
 	default:
 		break;
 	}
-	
+
 
 
 	PhysicsObject::onUpdate(dt);
-	
-	
+
+
 }
 
 void Player::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
 {
 	/* ngăn chặn di chuyển */
 
-	if(other->getCollisionType()==COLLISION_TYPE_GROUND)
+	if (other->getCollisionType() == COLLISION_TYPE_GROUND)
 	{
 		/*preventMovementWhenCollision(collisionTime, nx, ny);*/
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
@@ -216,7 +248,7 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 	{
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
 	}
-	
+
 }
 
 void Player::onIntersect(MovableRect * other)
