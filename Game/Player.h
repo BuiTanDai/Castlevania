@@ -4,6 +4,7 @@
 #include"KEY.h"
 #include"MorningStar.h"
 #include"ScoreBar.h"
+#include"SpaceManager.h"
 
 enum PLAYER_STATE
 {

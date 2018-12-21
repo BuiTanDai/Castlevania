@@ -282,6 +282,11 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
 	}
 
+	if (other->getCollisionType() == COLLISION_TYPE_GATE)
+	{
+		SpaceManager::getInstance()->setCurrentSpace(1);
+	}
+
 }
 
 void Player::onIntersect(MovableRect * other)
