@@ -1,6 +1,7 @@
 #pragma once
 #include "Item.h"
 #include "ScoreBar.h"
+#include "AdditionalObject.h"
 class ItemHeart :
 	public Item
 {

@@ -121,6 +121,12 @@
     <Filter Include="Object\Scorebar">
       <UniqueIdentifier>{ac14b560-ade6-4ab8-a722-94f35b9bc189}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Enemy\Bat">
+      <UniqueIdentifier>{33492128-1067-46cb-aa5f-bd30096361b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Boss">
+      <UniqueIdentifier>{508a3374-08b5-4ffe-b36e-a1d39c22bda2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -258,6 +264,12 @@
     <ClInclude Include="Knife.h">
       <Filter>Object\Knife</Filter>
     </ClInclude>
+    <ClInclude Include="Bat.h">
+      <Filter>Object\Enemy\Bat</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss.h">
+      <Filter>Object\Enemy\Boss</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -382,6 +394,12 @@
     </ClCompile>
     <ClCompile Include="Knife.cpp">
       <Filter>Object\Knife</Filter>
+    </ClCompile>
+    <ClCompile Include="Bat.cpp">
+      <Filter>Object\Enemy\Bat</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss.cpp">
+      <Filter>Object\Enemy\Boss</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

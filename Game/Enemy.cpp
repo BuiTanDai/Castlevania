@@ -43,14 +43,14 @@ void Enemy::onCollision(MovableRect * other, float collisionTime, int nx, int ny
 {
 	if (other->getCollisionType() == COLLISION_TYPE_PLAYER)
 	{
-		auto player = Player::getInstance();
-		player->setHealth(player->getHealth() - 2);
-
-		if (Player::getInstance()->getPlayerState() != PLAYER_STATE_DIE)
+		
+		
+		if (Player::getInstance()->getPlayerState() != PLAYER_STATE_DIE && Player::getInstance()->getPlayerState() != PLAYER_STATE_INJURED)
 		{
 			auto player = Player::getInstance();
-			player->setVy(-50);
-			player->setDx(-4);
+			player->setHealth(player->getHealth() - 2);
+			player->setIsOnGround(false);
+			player->setPlayerState(PLAYER_STATE_INJURED);
 		}
 	}
 

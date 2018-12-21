@@ -32,7 +32,11 @@ void Zombie::onInitFormFile(fstream & fs)
 
 void Zombie::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
 {
-	
+	if (other->getCollisionType() == COLLISION_TYPE_MORNING_STAR)
+	{
+		ItemHeart* itemHeart = new ItemHeart();
+		//itemHeart->setLocation(3,4);
+	}
 	Enemy::onCollision(other, collisionTime, nx, ny);
 }
 
@@ -54,10 +58,11 @@ void Zombie::update(float dt)
 		break;
 	case ZOMBIE_STATE_VISIBLE:
 
+		setDirectionFollowPlayer();
 		setIsRender(true);
 
 		setAnimation(ZOMBIE_ACTION_RUN);
-		setVx(-40);
+		setVx(getTextureDirection() * 40);
 		Enemy::update(dt);
 
 		break;

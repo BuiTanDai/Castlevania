@@ -32,7 +32,7 @@ void Aquaman::onCollision(MovableRect * other, float collisionTime, int nx, int 
 			setTextureDirection((TEXTURE_DIRECTION)-nx);
 		}
 	}
-	Enemy::onCollision(other, collisionTime, nx, ny);
+	//Enemy::onCollision(other, collisionTime, nx, ny);
 
 }
 

@@ -55,6 +55,7 @@ void Player::onUpdate(float dt)
 				setTextureDirection(TEXTURE_DIRECTION_RIGHT);
 			}
 
+			//dùng vũ khí
 			else if (keySubWeapon)
 			{
 				setAnimation(PLAYER_ATTACK);
@@ -80,6 +81,7 @@ void Player::onUpdate(float dt)
 
 			}
 
+			//ngồi
 			else if (keyDownDown)
 			{
 				if (keyAttackPress)
@@ -120,7 +122,7 @@ void Player::onUpdate(float dt)
 			if (keyJumpDown)
 			{
 				setIsOnGround(false);
-				setVy(-260);
+				setVy(-300);
 				setAnimation(PLAYER_STAND);
 
 			}
@@ -221,6 +223,22 @@ void Player::onUpdate(float dt)
 		setHeight(getHeightCurrentFrame());
 		setVx(0);
 		break;
+	case PLAYER_STATE_INJURED:
+		if (!isInjured)
+		{
+			setAnimation(PLAYER_INJURED);
+			setVx(-70*getTextureDirection());
+			setIsOnGround(false);
+			setVy(-70);
+			isInjured = true;
+		}
+		else 
+			if (getIsOnGround())
+			{
+				isInjured = false;
+				setPlayerState(PLAYER_STATE_NORMAL);
+			}
+		break;
 	default:
 		break;
 	}
@@ -250,8 +268,13 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 
 	if (other->getCollisionType() == COLLISION_TYPE_ENEMY)
 	{
+		if (getPlayerState() != PLAYER_STATE_DIE && getPlayerState() != PLAYER_STATE_INJURED)
+		{
+			setHealth(getHealth() - 2);
+			setIsOnGround(false);
+			setPlayerState(PLAYER_STATE_INJURED);
+		}
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
-		setHealth(getHealth() - 2);
 	}
 
 	if (other->getCollisionType() == COLLISION_TYPE_STATIC_OBJECT)
@@ -265,7 +288,7 @@ void Player::onIntersect(MovableRect * other)
 {
 	if (other->getCollisionType() == COLLISION_TYPE_ENEMY)
 	{
-
+		
 	}
 }
 

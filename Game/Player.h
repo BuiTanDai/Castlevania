@@ -10,7 +10,8 @@ enum PLAYER_STATE
 	PLAYER_STATE_NORMAL,
 	PLAYER_STATE_ON_STAIR,
 	PLAYER_STATE_UPGRADE,
-	PLAYER_STATE_DIE
+	PLAYER_STATE_DIE,
+	PLAYER_STATE_INJURED
 };
 
 enum PLAYER_ACTION
@@ -38,6 +39,7 @@ class Player :
 	bool isOnStair;
 	bool isMoveUp;
 	bool isMovingStair;
+	bool isInjured;
 	int health;
 	PLAYER_STATE player_state;
 public:

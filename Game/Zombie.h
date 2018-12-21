@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include"PhysicsObject.h"]
 #include"Enemy.h"
+#include"ItemHeart.h"
 /* lớp Zombie để hiện thực lớp PhysicsObject */
 
 

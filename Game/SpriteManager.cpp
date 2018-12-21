@@ -24,6 +24,7 @@ SpriteManager::SpriteManager()
 
 	/* thêm sprite cho zombie*/
 	sprites[SPRITE_INFO_ZOMBIE]->InitFromFile("test/zombie/image.png", "test/zombie/zombie.info.dat");
+	sprites[SPRITE_INFO_ZOMBIE]->image->direction = TEXTURE_DIRECTION_LEFT;
 	sprites[SPRITE_INFO_SIMON]->InitFromFile("assets/sprites/simon/image.png", "assets/sprites/simon/simon.info.dat");
 	sprites[SPRITE_INFO_SIMON]->image->direction =TEXTURE_DIRECTION_RIGHT;
 	sprites[SPRITE_INFO_FIRE]->InitFromFile("assets/sprites/fire/image.png", "assets/sprites/fire/fire.info.dat");
@@ -43,6 +44,11 @@ SpriteManager::SpriteManager()
 	//sprites[SPRITE_INFO_ITEMS_IN_SCORE_BAR]->InitFromFile("assets/sprites/water/image.png", "assets/sprites/water/water.info.dat");
 	sprites[SPRITE_INFO_KNIFE]->InitFromFile("assets/sprites/knife/image.png", "assets/sprites/knife/knife.info.dat");
 	sprites[SPRITE_INFO_BULLET]->InitFromFile("assets/sprites/bullet/image.png", "assets/sprites/bullet/bullet.info.dat");
+
+
+	sprites[SPRITE_INFO_BAT]->InitFromFile("assets/sprites/Enemies/bat/image.png", "assets/sprites/Enemies/bat/bat.info.dat");
+	sprites[SPRITE_INFO_BAT]->image->direction = TEXTURE_DIRECTION_LEFT;
+	sprites[SPRITE_INFO_BOSS]->InitFromFile("assets/sprites/Enemies/boss/image.png", "assets/sprites/Enemies/boss/boss.info.dat");
 
 }
 SpriteManager::~SpriteManager()

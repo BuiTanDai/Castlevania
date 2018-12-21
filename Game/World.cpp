@@ -17,6 +17,9 @@
 #include"Aquaman.h"
 #include"ItemUpgrade.h"
 #include"Water.h"
+#include"Bat.h"
+#include"Boss.h"
+
 void World::Init(const char * tilesheetPath, 
 	const char * matrixPath, 
 	const char * objectsPath,
@@ -71,6 +74,12 @@ void World::Init(const char * tilesheetPath,
 			break;
 		case SPRITE_INFO_ITEM_UPGRADE:
 			obj = new ItemUpgrade();
+			break;
+		case SPRITE_INFO_BAT:
+			obj = new Bat();
+			break;
+		case SPRITE_INFO_BOSS:
+			obj = new Boss();
 			break;
 
 		case -2:

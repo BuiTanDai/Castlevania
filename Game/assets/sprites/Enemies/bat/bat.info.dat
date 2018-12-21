@@ -1,0 +1,18 @@
+Sprite bat
+R	G	B
+255	175	255	247
+Animation Count
+1
+
+
+Name
+Animation
+Frame Count
+3
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+0			2			16				14				0			0
+16			6			16				10				0			0
+32			0			16				16				0			0
+
+
