@@ -33,6 +33,10 @@ void Player::onUpdate(float dt)
 	{
 	case PLAYER_STATE_NORMAL:
 		//mặt đất
+		if (getHealth() == 0)
+		{
+			setPlayerState(PLAYER_STATE_DIE);
+		}
 		setPhysicsEnable(true);
 		if (getIsOnGround())
 		{
@@ -212,6 +216,13 @@ void Player::onUpdate(float dt)
 				setPlayerState(PLAYER_STATE_NORMAL);
 			}
 		}
+		break;
+	case PLAYER_STATE_DIE:
+		setAnimation(PLAYER_DIE);
+		setPhysicsEnable(true);
+		setHeight(getHeightCurrentFrame());
+		setVx(0);
+		break;
 	default:
 		break;
 	}
@@ -220,7 +231,7 @@ void Player::onUpdate(float dt)
 
 	PhysicsObject::onUpdate(dt);
 
-
+	ScoreBar::getInstance()->setHealth(getHealth());
 }
 
 void Player::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
@@ -242,6 +253,7 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 	if (other->getCollisionType() == COLLISION_TYPE_ENEMY)
 	{
 		PhysicsObject::onCollision(other, collisionTime, nx, ny);
+		setHealth(getHealth() - 2);
 	}
 
 	if (other->getCollisionType() == COLLISION_TYPE_STATIC_OBJECT)
@@ -306,11 +318,25 @@ bool Player::getIsMovingStair()
 	return isMovingStair;
 }
 
+void Player::setHealth(int health)
+{
+	if (health >= 0)
+	{
+		this->health = health;
+	}
+}
+
+int Player::getHealth()
+{
+	return health;
+}
+
 Player::Player()
 {
 	setSprite(SPR(SPRITE_INFO_SIMON));
 	setTextureDirection(TEXTURE_DIRECTION_RIGHT);
 	setCollisionType(COLLISION_TYPE_PLAYER);
+	setHealth(ScoreBar::getInstance()->getHealth());
 }
 
 

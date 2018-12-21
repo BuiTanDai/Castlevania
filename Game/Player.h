@@ -3,12 +3,14 @@
 #include"SpriteManager.h"
 #include"KEY.h"
 #include"MorningStar.h"
+#include"ScoreBar.h"
 
 enum PLAYER_STATE
 {
 	PLAYER_STATE_NORMAL,
 	PLAYER_STATE_ON_STAIR,
-	PLAYER_STATE_UPGRADE
+	PLAYER_STATE_UPGRADE,
+	PLAYER_STATE_DIE
 };
 
 enum PLAYER_ACTION
@@ -36,6 +38,7 @@ class Player :
 	bool isOnStair;
 	bool isMoveUp;
 	bool isMovingStair;
+	int health;
 	PLAYER_STATE player_state;
 public:
 	static Player* getInstance();
@@ -51,6 +54,8 @@ public:
 	bool getIsMoveUp();
 	void setIsMovingStair(bool isMovingStair);
 	bool getIsMovingStair();
+	void setHealth(int health);
+	int getHealth();
 	Player();
 	~Player();
 };

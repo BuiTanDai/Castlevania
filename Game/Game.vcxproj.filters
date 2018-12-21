@@ -91,9 +91,6 @@
     <Filter Include="Object\Enemy\Zombie">
       <UniqueIdentifier>{41aad217-0c6d-4c00-bcdc-1513c59ff2a1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Object\Scobar">
-      <UniqueIdentifier>{ac14b560-ade6-4ab8-a722-94f35b9bc189}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Object\EndStair">
       <UniqueIdentifier>{be58cf5b-f4b5-4b12-8008-29844697eac3}</UniqueIdentifier>
     </Filter>
@@ -120,6 +117,9 @@
     </Filter>
     <Filter Include="Object\Bullet">
       <UniqueIdentifier>{7d1e62db-9420-4cae-9dc0-21fba5451ae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Scorebar">
+      <UniqueIdentifier>{ac14b560-ade6-4ab8-a722-94f35b9bc189}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -223,7 +223,7 @@
       <Filter>Object\Enemy\Panther</Filter>
     </ClInclude>
     <ClInclude Include="ScoreBar.h">
-      <Filter>Object\Scobar</Filter>
+      <Filter>Object\Scorebar</Filter>
     </ClInclude>
     <ClInclude Include="EndStair.h">
       <Filter>Object\EndStair</Filter>
@@ -348,7 +348,7 @@
       <Filter>Object\Enemy\Panther</Filter>
     </ClCompile>
     <ClCompile Include="ScoreBar.cpp">
-      <Filter>Object\Scobar</Filter>
+      <Filter>Object\Scorebar</Filter>
     </ClCompile>
     <ClCompile Include="EndStair.cpp">
       <Filter>Object\EndStair</Filter>
