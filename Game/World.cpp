@@ -127,34 +127,7 @@ void World::Init(const char * tilesheetPath,
 		collisionTypeCollides._Add(collisionTypeCollide);
 	}
 
-	/* đọc space */
-	int numberOfSpaces = 0;
-	ifstream fsSpace(spacePath);
-	/* enter 1 dòng */
-	ignoreLineIfstream(fsSpace, 1);
-	fsSpace >> numberOfSpaces;
-	for (size_t i = 0; i < numberOfSpaces; i++)
-	{
-		/* enter 4 dòng */
-		ignoreLineIfstream(fsSpace, 4);
-		Space* space = new Space();
-		fsSpace >> space->X >> space->Y >> space->Width >> space->Height;
 
-		/* enter 2 dòng */
-		ignoreLineIfstream(fsSpace, 2);
-		fsSpace >> space->CameraX >> space->CameraY;
-
-		/* enter 2 dòng */
-		ignoreLineIfstream(fsSpace, 2);
-		fsSpace >> space->PlayerX >> space->PlayerY;
-
-		/* thêm vào space */
-		spaces._Add(space);
-	}
-
-	/* bắt đầu từ space 0 */
-	setCurrentSpace(1);
-	resetLocationInSpace();
 }
 
 void World::Init(const char * folderPath)
@@ -186,6 +159,7 @@ void World::Init(const char * folderPath)
 
 void World::update(float dt)
 {
+	auto spaceManager = SpaceManager::getInstance();
 	KEY* key = KEY::getInstance();
 	/* cập nhật key */
 	key->update();
@@ -193,28 +167,23 @@ void World::update(float dt)
 	/* chuyển space khi nhấn phím */
 	if (key->isNumber1Down)
 	{
-		setCurrentSpace(0);
-		resetLocationInSpace();
+		spaceManager->setCurrentSpace(0);
 	}
 	if (key->isNumber2Down)
 	{
-		setCurrentSpace(1);
-		resetLocationInSpace();
+		spaceManager->setCurrentSpace(1);
 	}
 	if (key->isNumber3Down)
 	{
-		setCurrentSpace(2);
-		resetLocationInSpace();
+		spaceManager->setCurrentSpace(2);
 	}
 	if (key->isNumber4Down)
 	{
-		setCurrentSpace(3);
-		resetLocationInSpace();
+		spaceManager->setCurrentSpace(3);
 	}
 	if (key->isNumber5Down)
 	{
-		setCurrentSpace(4);
-		resetLocationInSpace();
+		spaceManager->setCurrentSpace(4);
 	}
 
 	for (size_t i = 0; i < allObjects.Count; i++)
@@ -283,26 +252,6 @@ void World::render()
 	AdditionalObject::listObjectRender(Camera::getInstance());
 }
 
-void World::setCurrentSpace(int spaceIndex)
-{
-	this->currentSpace = spaces.at(spaceIndex);
-	Camera::getInstance()->setSpace(this->currentSpace);
-}
-
-Space * World::getCurrentSpace()
-{
-	return currentSpace;
-}
-
-void World::resetLocationInSpace()
-{
-	Camera* camera = Camera::getInstance();
-	Player* player = Player::getInstance();
-
-	camera->setLocation(getCurrentSpace()->CameraX, getCurrentSpace()->CameraY);
-	player->setLocation(getCurrentSpace()->PlayerX, getCurrentSpace()->PlayerY);
-	
-}
 
 World::World()
 {

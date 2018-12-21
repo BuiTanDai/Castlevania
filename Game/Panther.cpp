@@ -9,10 +9,9 @@ void Panther::setPantherState(PANTHER_STATE pantherState)
 
 void Panther::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
 {
-	if (ny == -1)
-	{
+	
 		Enemy::onCollision(other, collisionTime, nx, ny);
-	}
+	
 
 	if (other->getCollisionType() == COLLISION_TYPE_GROUND && ny == -1 && pantherState == PANTHER_STATE_RUN &&
 		((getDx() < 0 && getleft() <= other->getleft()) ||

@@ -3,7 +3,7 @@
 #include"SpriteManager.h"
 #include"BaseObject.h"
 #include"CollisionTypeCollide.h"
-#include"Space.h"
+#include"SpaceManager.h"
 
 class World
 {
@@ -17,12 +17,6 @@ class World
 	/* danh sách object được phân loại theo collision_type */
 	List<List<BaseObject*>*> objectCategories;
 
-	/* danh sách space trong world */
-	List<Space*> spaces;
-
-	/* space hiện tại */
-	Space* currentSpace;
-
 public:
 	void Init(const char* tilesheetPath, 
 		const char* matrixPath, 
@@ -34,14 +28,6 @@ public:
 	void update(float dt);
 	/* vẽ các đối tượng trong game */
 	void render();
-
-	/* setCurrentSpace */
-	void setCurrentSpace(int spaceIndex);
-
-	Space* getCurrentSpace();
-
-	/* reset camera va player dua vao currentSpace */
-	void resetLocationInSpace();
 
 	World();
 	~World();

@@ -1,5 +1,7 @@
 #pragma once
 struct Space
 {
-	int X, Y, Width, Height, CameraX, CameraY, PlayerX, PlayerY;
+	int X, Y, Width, Height;
+	int cameraX, cameraY;
+	int playerX, playerY;
 };

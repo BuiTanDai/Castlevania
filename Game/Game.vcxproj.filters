@@ -127,6 +127,9 @@
     <Filter Include="Object\Enemy\Boss">
       <UniqueIdentifier>{508a3374-08b5-4ffe-b36e-a1d39c22bda2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Basic\SpaceMangager">
+      <UniqueIdentifier>{222de248-0b97-4606-bf7b-44942bf56120}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -270,6 +273,9 @@
     <ClInclude Include="Boss.h">
       <Filter>Object\Enemy\Boss</Filter>
     </ClInclude>
+    <ClInclude Include="SpaceManager.h">
+      <Filter>Basic\SpaceMangager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -400,6 +406,9 @@
     </ClCompile>
     <ClCompile Include="Boss.cpp">
       <Filter>Object\Enemy\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceManager.cpp">
+      <Filter>Basic\SpaceMangager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

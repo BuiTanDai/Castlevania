@@ -1,20 +1,20 @@
 #pragma once
-#include"Space.h"
-#include"List.h"
+#include "List.h"
 #include"GameUtils.h"
+#include"Player.h"
+#include"Camera.h"
+#include"Space.h"
+
 class SpaceManager
 {
+	List<Space*> listSpace;
 	static SpaceManager* instance;
-	List<Space*> spaceManager;
-	int currentSpace;
+	Space* currentSpace;
 public:
 	static SpaceManager* getInstance();
-	void Init(const char* path);
-	/* setCurrentSpace */
-	void setCurrentSpace(int spaceIndex);
+	void setCurrentSpace(int space);
 	Space* getCurrentSpace();
-	void nextSpace(int currentSpace);
-	void previousSpace(int currentSpace);
+	void ResetLocation();
 	SpaceManager();
 	~SpaceManager();
 };
