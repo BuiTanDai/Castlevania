@@ -122,7 +122,7 @@ void Player::onUpdate(float dt)
 			if (keyJumpDown)
 			{
 				setIsOnGround(false);
-				setVy(-300);
+				setVy(-250);
 				setAnimation(PLAYER_STAND);
 
 			}
@@ -227,7 +227,7 @@ void Player::onUpdate(float dt)
 		if (!isInjured)
 		{
 			setAnimation(PLAYER_INJURED);
-			setVx(-70*getTextureDirection());
+			setVx(-80*getTextureDirection());
 			setIsOnGround(false);
 			setVy(-70);
 			isInjured = true;
