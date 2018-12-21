@@ -1,0 +1,143 @@
+Sprite 1
+R	G	B
+255	0	0	0
+Animation Count
+14
+
+
+Name
+Number
+Frame Count
+10
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+0			9			7				7				0			0
+7			9			6				7				0			0
+13			9			7				7				0			0
+20			9			7				7				0			0
+27			9			7				7				0			0
+34			9			7				7				0			0
+41			9			7				7				0			0
+48			9			7				7				0			0
+55			9			7				7				0			0
+62			9			7				7				0			0
+
+
+Name
+ItemMorningStar
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+69			0			15				16				0			0
+
+
+Name
+LostHealth
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+84			10			3				6				0			0
+
+
+Name
+Knife
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+87			7			16				9				0			0
+
+
+Name
+HollyWater
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+103			0			16				16				0			0
+
+
+Name
+HollyCross
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+119			0			16				16				0			0
+
+
+Name
+Axe
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+135			2			15				14				0			0
+
+
+Name
+GoldPotion
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+150			0			13				16				0			0
+
+
+Name
+StopWatch
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+163			0			15				16				0			0
+
+
+Name
+Item400pts
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+178			3			12				13				0			0
+
+
+Name
+Item700pts
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+190			3			12				13				0			0
+
+
+Name
+Ite1000pts
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+202			3			12				13				0			0
+
+
+Name
+Boomerang
+Frame Count
+2
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+214			3			14				13				0			0
+228			2			15				14				0			0
+
+
+Name
+ItemBoomerang
+Frame Count
+1
+
+FrameX		FrameY		FrameWidth		FrameHeight		AnchorX		AnchorY
+228			2			15				14				0			0
+
+

@@ -39,7 +39,8 @@ SpriteManager::SpriteManager()
 	//sprites[SPRITE_INFO_ITEM_UPGRADE]->InitFromFile("assets/sprites/candle/image.png", "assets/sprites/candle/candle.info.dat");
 	sprites[SPRITE_INFO_ITEM_UPGRADE]->InitFromFile("assets/sprites/Item/item_upgrade/image.png", "assets/sprites/Item/item_upgrade/item_upgrade.info.dat");
 	sprites[SPRITE_INFO_WATER_EFFECT]->InitFromFile("assets/sprites/water/image.png", "assets/sprites/water/water.info.dat");
-
+	sprites[SPRITE_INFO_ITEMS_IN_SCORE_BAR]->InitFromFile("assets/sprites/misc/items.png", "assets/sprites/misc/items.info.dat");
+	//sprites[SPRITE_INFO_ITEMS_IN_SCORE_BAR]->InitFromFile("assets/sprites/water/image.png", "assets/sprites/water/water.info.dat");
 }
 SpriteManager::~SpriteManager()
 {
