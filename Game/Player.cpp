@@ -82,7 +82,6 @@ void Player::onUpdate(float dt)
 
 			else if (keyDownDown)
 			{
-				//setHeight(23);
 				if (keyAttackPress)
 				{
 					setVx(0);
@@ -94,8 +93,7 @@ void Player::onUpdate(float dt)
 					setVx(0);
 					setAnimation(PLAYER_JUMP);
 				}
-
-
+				//setHeight(getHeightCurrentFrame());
 
 			}
 			else if (keyAttackPress & getDx() == 0 & getVx() == 0)

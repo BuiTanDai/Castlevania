@@ -2,6 +2,7 @@
 #include "PhysicsObject.h"
 #include "BaseObject.h"
 #include "Player.h"
+#include "ScoreBar.h"
 class Enemy :
 	public PhysicsObject
 {

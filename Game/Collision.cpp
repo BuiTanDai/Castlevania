@@ -143,7 +143,7 @@ void Collision::CheckCollision(MovableRect * M, MovableRect * S)
 		{
 			/* onCollision là phương thức ảo để hiện thực xử lý va chạm của mỗi đối tượng */
 			M->onCollision(S, collisionTime, normalX, normalY);
-			S->onCollision(M, collisionTime, normalX, normalY);
+			//S->onCollision(M, collisionTime, normalX, normalY);
 		}
 		/* còn nếu collisionTime==1 thì không có va chạm */
 

@@ -114,6 +114,6 @@ void PhysicsObject::onCollision(MovableRect * other, float collisionTime, int nx
 		}
 		preventMovementWhenCollision(collisionTime, nx, ny);
 	}
-
+	BaseObject::onCollision(other, collisionTime, nx, ny);
 }
 

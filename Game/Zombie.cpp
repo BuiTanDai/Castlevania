@@ -32,12 +32,7 @@ void Zombie::onInitFormFile(fstream & fs)
 
 void Zombie::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
 {
-	if (other->getCollisionType() == COLLISION_TYPE_PLAYER)
-	{
-		auto player = Player::getInstance();
-		player->setVy(-50);
-		player->setDx(-4);
-	}
+	
 	Enemy::onCollision(other, collisionTime, nx, ny);
 }
 

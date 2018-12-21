@@ -215,7 +215,7 @@ void World::update(float dt)
 		if (allObjects[i]->getAlive())
 		{
 			Collision::CheckCollision(Player::getInstance(), allObjects[i]);
-			//Collision::CheckCollision(allObjects[i], Player::getInstance());
+			Collision::CheckCollision(allObjects[i], Player::getInstance());
 		}
 		
 	}
